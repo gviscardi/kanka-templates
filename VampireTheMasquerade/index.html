@@ -1,0 +1,354 @@
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>VtM Attribute Template</title>
+
+  <meta name="description" content="Attribute template / character sheet for Vampire: the Masquerade.">
+  <meta name="author" content="Helena Sánchez">
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <main>
+        <h1>Vampiro
+            <br>
+            <span class="subtitle">La Mascarada</span>
+        </h1>
+        <div id="overview" class="row">
+            <div id="overview-1">
+                <p>Nombre: {Name}</p>
+                <p>Jugador: {Player}</p>
+                <p>Crónica: {Chronicle}</p>
+            </div>
+            <div id="overview-2">
+                <p>Naturaleza: {Nature}</p>
+                <p>Conducta: {Conduct}</p>
+                <p>Concepto: {Concept}</p>
+            </div>
+            <div id="overview-3">
+                <p>Clan: {Clan}</p>
+                <p>Generación: {Generation}</p>
+                <p>Sire: {Sire}</p>
+            </div>
+        </div>
+        <div id="attributes" class="row">
+            <h2>Atributos</h2>
+            <div id="attributes-1" class="col">
+                <h3>Físicos</h3>
+                <ul>
+                    <li class="attribute"><span class="label">Fuerza</span>
+                        <div class="points">
+                            {STR}
+                        </div>
+                    </li>
+                    <li class="attribute">
+                        <span class="label">Destreza</span>
+                        <div class="points">
+                            {DEX}
+                        </div>
+                    </li>
+                    <li class="attribute">
+                        <span class="label">Resistencia</span>
+                        <div class="points">
+                            {STA}
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div id="attributes-2" class="col">
+                <h3>Sociales</h3>
+                <ul>
+                    <li class="attribute">
+                        <span class="label">Carisma</span>
+                        <div class="points">
+                            {CHA}
+                        </div>
+                    </li>
+                    <li class="attribute">
+                        <span class="label">Manipulación</span>
+                        <div class="points">
+                            {MAN}
+                        </div>
+                    </li>
+                    <li class="attribute">
+                        <span class="label">Apariencia</span>
+                        <div class="points">
+                            {COM}
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div id="attributes-3" class="col">
+                <h3>Mentales</h3>
+                <ul>
+                    <li class="attribute">
+                        <span class="label">Percepción</span>
+                        <div class="points">
+                            {WIT}
+                        </div>
+                    </li>
+                    <li class="attribute">
+                        <span class="label">Inteligencia</span>
+                        <div class="points">
+                            {INT}
+                        </div>
+                    </li>
+                    <li class="attribute">
+                        <span class="label">Astucia</span>
+                        <div class="points">
+                            {RES}
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="abilities" class="row">
+            <h2>Habilidades</h2>
+            <div id="abilities-1" class="col">
+                <h3>Talentos</h3>
+                <ul>
+                    <li class="attribute">
+                        <span class="label">Alerta</span>
+                        <div class="points">
+                            {Alert}
+                        </div>
+                    </li>
+                    <li class="attribute">
+                        <span class="label">Atletismo</span>
+                        <div class="points"> 
+                            {Athletics}
+                        </div>
+                    </li>
+                    <li class="attribute">
+                        <span class="label">Callejeo</span>
+                        <div class="points">
+                            {Streetwise}
+                        </div>
+                    </li>
+                    <li class="attribute">
+                        <span class="label">Conciencia</span>
+                        <div class="points"> 
+                            {Awareness}
+                        </div>
+                    </li>
+                    <li class="attribute">
+                        <span class="label">Empatía</span>
+                        <div class="points">
+                            {Empathy}
+                        </div>
+                    </li>
+                    <li class="attribute">
+                        <span class="label">Expresión</span>
+                        <div class="points">
+                            {Expression}
+                        </div>
+                    </li>
+                    <li class="attribute">
+                        <span class="label">Intimidación</span>
+                        <div class="points"> 
+                            {Intimidation}
+                        </div>
+                    </li>
+                    <li class="attribute">
+                        <span class="label">Liderazgo</span>
+                        <div class="points"> 
+                            {Leadership}
+                        </div>
+                    </li>
+                    <li class="attribute">
+                        <span class="label">Pelea</span>
+                        <div class="points">
+                            {Brawl}
+                        </div>
+                    </li>
+                    <li class="attribute">
+                        <span class="label">Subterfugio</span>
+                        <div class="points">
+                            {Subterfuge}
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div id="abilities-2" class="col">
+                <h3>Técnicas</h3 class="col">
+                    <ul>
+                    <li class="attribute">
+                        <span class="label">Armas de Fuego</span>
+                        <div class="points">
+                            {Firearms}
+                        </div>
+                    </li>
+                    <li class="attribute">
+                        <span class="label">Artesanía</span>
+                        <div class="points"> 
+                            {Craft}
+                        </div>
+                    </li>
+                    <li class="attribute">
+                        <span class="label">Conducir</span>
+                        <div class="points">
+                            {Drive}
+                        </div>
+                    </li>
+                    <li class="attribute">
+                        <span class="label">Etiqueta</span>
+                        <div class="points"> 
+                            {Etiquette}
+                        </div>
+                    </li>
+                    <li class="attribute">
+                        <span class="label">Interpretación</span>
+                        <div class="points">
+                            {Performance}
+                        </div>
+                    </li>
+                    <li class="attribute">
+                        <span class="label">Latrocinio</span>
+                        <div class="points">
+                            {Larceny}
+                        </div>
+                    </li>
+                    <li class="attribute">
+                        <span class="label">Pelea con armas</span>
+                        <div class="points"> 
+                            {Melee}
+                        </div>
+                    </li>
+                    <li class="attribute">
+                        <span class="label">Sigilo</span>
+                        <div class="points"> 
+                            {Stealth}
+                        </div>
+                    </li>
+                    <li class="attribute">
+                        <span class="label">Supervivencia</span>
+                        <div class="points">
+                            {Survival}
+                        </div>
+                    </li>
+                    <li class="attribute">
+                        <span class="label">Trato con Animales</span>
+                        <div class="points">
+                            {Animal Ken}
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div id="abilities-3" class="col">
+                <h3>Conocimientos</h3>
+                <ul>
+                    <li class="attribute">
+                        <span class="label">Academicismo</span>
+                        <div class="points">
+                            {Academics}
+                        </div>
+                    </li>
+                    <li class="attribute">
+                        <span class="label">Ciencias</span>
+                        <div class="points"> 
+                            {Science}
+                        </div>
+                    </li>
+                    <li class="attribute">
+                        <span class="label">Finanzas</span>
+                        <div class="points">
+                            {Finance}
+                        </div>
+                    </li>
+                    <li class="attribute">
+                        <span class="label">Informática</span>
+                        <div class="points"> 
+                            {Computer}
+                        </div>
+                    </li>
+                    <li class="attribute">
+                        <span class="label">Investigación</span>
+                        <div class="points">
+                            {Investigation}
+                        </div>
+                    </li>
+                    <li class="attribute">
+                        <span class="label">Leyes</span>
+                        <div class="points">
+                            {Law}
+                        </div>
+                    </li>
+                    <li class="attribute">
+                        <span class="label">Medicina</span>
+                        <div class="points"> 
+                            {Medicine}
+                        </div>
+                    </li>
+                    <li class="attribute">
+                        <span class="label">Ocultismo</span>
+                        <div class="points"> 
+                            {Occult}
+                        </div>
+                    </li>
+                    <li class="attribute">
+                        <span class="label">Política</span>
+                        <div class="points">
+                            {Politics}
+                        </div>
+                    </li>
+                    <li class="attribute">
+                        <span class="label">Tecnología</span>
+                        <div class="points">
+                            {Technology}
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="benefits" class="row">
+            <h2>Ventajas</h2>
+            <div id="benefits-1" class="col">
+                <h3>Disciplinas</h3>
+                <ul>
+                    <li class="attribute">
+                        
+                    </li>
+                </ul>
+            </div>
+            <div id="benefits-2" class="col">
+                <h3>Trasfondos</h3>
+            </div>
+            <div id="benefits-3" class="col">
+                <h3>Virtudes</h3>
+            </div>
+        </div>
+        <div id="tracks" class="row">
+            <div id="tracks-1" class="col">
+                <h3>Méritos y Defectos</h3>
+            </div>
+            <div id="tracks-2" class="col">
+                <div id="path">
+                    <h3>Humanidad/Senda</h3>
+                </div>
+                <div id="willpower">
+                    <h3>Fuerza de voluntad</h3>
+                </div>
+                <div id="blood">
+                    <h3>Reserva de sangre</h3>
+                </div>
+            </div>
+            <div id="tracks-3" class="col">
+                <div id="health">
+                    <h3>Salud</h3>
+                </div>
+                <div id="weakness">
+                    <h3>Debilidad</h3>
+                </div>
+                <div id="xp">
+                    <h3>Experiencia</h3>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+    </script>
+</body>
+</html>
