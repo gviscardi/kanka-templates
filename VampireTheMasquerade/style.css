@@ -22,7 +22,6 @@ main {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    border: 1px dotted lime;
 }
 .row h2 {
     width: 100%;
@@ -52,6 +51,7 @@ ul li {
 .points {
     margin-left: 8px;
     width: 40px;
+    height: 20px;
     border: 1px solid black;
     border-radius: 10%;
     padding: 3px;
