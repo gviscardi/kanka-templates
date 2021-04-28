@@ -1,72 +1,75 @@
 body {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 /* Headings */
-h1, h2, h3 {
-    text-align: center;
+h1,
+h2,
+h3 {
+  text-align: center;
 }
 .subtitle {
-    font-size: 50%;
+  font-size: 50%;
 }
 
 /* Layout */
 main {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 12px;
-    border: 2px dashed darkcyan;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 12px;
+  border: 2px dashed darkcyan;
 }
 .row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 .row h2 {
-    width: 100%;
-    margin-bottom: 0;
+  width: 100%;
+  margin-bottom: 0;
 }
 .col {
-    width: 33%;
-    padding: 8px 12px;
-    box-sizing: border-box;
+  width: 33%;
+  padding: 8px 12px;
+  box-sizing: border-box;
 }
-
 
 /* Powers */
 ul {
-    list-style-type: none;
-    padding-inline-start: 0;
+  list-style-type: none;
+  padding-inline-start: 0;
 }
 ul li {
-    padding: 5px;
+  padding: 5px;
 }
 .attribute {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  background-color: transparent;
 }
 .points {
-    margin-left: 8px;
-    width: 40px;
-    height: 20px;
-    border: 1px solid black;
-    border-radius: 10%;
-    padding: 3px;
-    text-align: center;
-    font-size: small;
-    overflow: hidden;
+  margin-left: 8px;
+  width: 40px;
+  height: 20px;
+  border: 1px solid black;
+  border-radius: 10%;
+  padding: 3px;
+  text-align: center;
+  font-size: small;
+  overflow: hidden;
 }
 .attribute .label {
-    display: flex;
-    align-items: flex-end;
-    width: 95%;
+  display: flex;
+  align-items: flex-end;
+  width: 95%;
+  color: black;
 }
 .attribute .label:after {
-    margin-left: 4px;
-    border-bottom: 1px dotted black;
-    content: '';
-    flex: 1;
+  margin-left: 4px;
+  border-bottom: 1px dotted black;
+  content: '';
+  flex: 1;
 }
