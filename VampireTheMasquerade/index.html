@@ -19,19 +19,19 @@
         </h1>
         <div id="overview" class="row">
             <div id="overview-1">
-                <p>Nombre: {Name}</p>
-                <p>Jugador: {Player}</p>
-                <p>Crónica: {Chronicle}</p>
+                <p>Nombre: {{ $name }}</p>
+                <p>Jugador: {{ $player }}</p>
+                <p>Crónica: {{ $chronicle }}</p>
             </div>
             <div id="overview-2">
-                <p>Naturaleza: {Nature}</p>
-                <p>Conducta: {Conduct}</p>
-                <p>Concepto: {Concept}</p>
+                <p>Naturaleza: {{ $nature }}</p>
+                <p>Conducta: {{ $conduct }}</p>
+                <p>Concepto: {{ $concept }}</p>
             </div>
             <div id="overview-3">
-                <p>Clan: {Clan}</p>
-                <p>Generación: {Generation}</p>
-                <p>Sire: {Sire}</p>
+                <p>Clan: {{ $clan }}</p>
+                <p>Generación: {{ $generation }}</p>
+                <p>Sire: {{ $sire }}</p>
             </div>
         </div>
         <div id="attributes" class="row">
@@ -41,19 +41,19 @@
                 <ul>
                     <li class="attribute"><span class="label">Fuerza</span>
                         <div class="points">
-                            {STR}
+                            {{ $STR }}
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Destreza</span>
                         <div class="points">
-                            {DEX}
+                            {{ $DEX }}
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Resistencia</span>
                         <div class="points">
-                            {STA}
+                            {{ $STA }}
                         </div>
                     </li>
                 </ul>
@@ -64,19 +64,19 @@
                     <li class="attribute">
                         <span class="label">Carisma</span>
                         <div class="points">
-                            {CHA}
+                            {{ $CHA }}
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Manipulación</span>
                         <div class="points">
-                            {MAN}
+                            {{ $MAN }}
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Apariencia</span>
                         <div class="points">
-                            {COM}
+                            {{ $COM }}
                         </div>
                     </li>
                 </ul>
@@ -87,19 +87,19 @@
                     <li class="attribute">
                         <span class="label">Percepción</span>
                         <div class="points">
-                            {WIT}
+                            {{ $WIT }}
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Inteligencia</span>
                         <div class="points">
-                            {INT}
+                            {{ $INT }}
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Astucia</span>
                         <div class="points">
-                            {RES}
+                            {{ $RES }}
                         </div>
                     </li>
                 </ul>
@@ -113,61 +113,61 @@
                     <li class="attribute">
                         <span class="label">Alerta</span>
                         <div class="points">
-                            {Alert}
+                            {{ $alert }}
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Atletismo</span>
                         <div class="points"> 
-                            {Athletics}
+                            {{ $athletics }}
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Callejeo</span>
                         <div class="points">
-                            {Streetwise}
+                            {{ $streetwise }}
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Conciencia</span>
                         <div class="points"> 
-                            {Awareness}
+                            {{ $awareness }}
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Empatía</span>
                         <div class="points">
-                            {Empathy}
+                            {{ $empathy }}
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Expresión</span>
                         <div class="points">
-                            {Expression}
+                            {{ $expression }}
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Intimidación</span>
                         <div class="points"> 
-                            {Intimidation}
+                            {{ $intimidation }}
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Liderazgo</span>
                         <div class="points"> 
-                            {Leadership}
+                            {{ $leadership }}
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Pelea</span>
                         <div class="points">
-                            {Brawl}
+                            {{ $brawl }}
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Subterfugio</span>
                         <div class="points">
-                            {Subterfuge}
+                            {{ $subterfuge }}
                         </div>
                     </li>
                 </ul>
@@ -178,61 +178,61 @@
                     <li class="attribute">
                         <span class="label">Armas de Fuego</span>
                         <div class="points">
-                            {Firearms}
+                            {{ $firearms }}
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Artesanía</span>
                         <div class="points"> 
-                            {Craft}
+                            {{ $craft }}
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Conducir</span>
                         <div class="points">
-                            {Drive}
+                            {{ $drive }}
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Etiqueta</span>
                         <div class="points"> 
-                            {Etiquette}
+                            {{ $etiquette }}
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Interpretación</span>
                         <div class="points">
-                            {Performance}
+                            {{ $performance }}
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Latrocinio</span>
                         <div class="points">
-                            {Larceny}
+                            {{ $larceny }}
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Pelea con armas</span>
                         <div class="points"> 
-                            {Melee}
+                            {{ $melee }}
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Sigilo</span>
                         <div class="points"> 
-                            {Stealth}
+                            {{ $stealth }}
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Supervivencia</span>
                         <div class="points">
-                            {Survival}
+                            {{ $survival }}
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Trato con Animales</span>
                         <div class="points">
-                            {Animal Ken}
+                            {{ $animalKen }}
                         </div>
                     </li>
                 </ul>
@@ -243,61 +243,61 @@
                     <li class="attribute">
                         <span class="label">Academicismo</span>
                         <div class="points">
-                            {Academics}
+                            {{ $academics }}
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Ciencias</span>
                         <div class="points"> 
-                            {Science}
+                            {{ $science }}
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Finanzas</span>
                         <div class="points">
-                            {Finance}
+                            {{ $finance }}
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Informática</span>
                         <div class="points"> 
-                            {Computer}
+                            {{ $computer }}
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Investigación</span>
                         <div class="points">
-                            {Investigation}
+                            {{ $investigation }}
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Leyes</span>
                         <div class="points">
-                            {Law}
+                            {{ $law }}
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Medicina</span>
                         <div class="points"> 
-                            {Medicine}
+                            {{ $medicine }}
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Ocultismo</span>
                         <div class="points"> 
-                            {Occult}
+                            {{ $occult }}
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Política</span>
                         <div class="points">
-                            {Politics}
+                            {{ $politics }}
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Tecnología</span>
                         <div class="points">
-                            {Technology}
+                            {{ $technology }}
                         </div>
                     </li>
                 </ul>
