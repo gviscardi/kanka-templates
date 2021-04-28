@@ -173,7 +173,7 @@
                 </ul>
             </div>
             <div id="abilities-2" class="col">
-                <h3>Técnicas</h3 class="col">
+                <h3>Técnicas</h3>
                     <ul>
                     <li class="attribute">
                         <span class="label">Armas de Fuego</span>
@@ -344,11 +344,18 @@
                 </div>
                 <div id="xp">
                     <h3>Experiencia</h3>
+                    <div>
+                        @foreach($XP as $xp)
+                            <p>o</p>
+                        @endforeach
+                    </div>
                 </div>
             </div>
         </div>
     </main>
     <script>
+        /* Testing stuff */
+        var XP = 3
     </script>
 </body>
 </html>
