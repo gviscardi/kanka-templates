@@ -1,2 +1,3 @@
-# kankaVtMtemplate
-Attribute template / Character sheet for Vampire: the Masquerade RPG.
+# Kanka Templates
+
+Attribute templates for kanka.io
