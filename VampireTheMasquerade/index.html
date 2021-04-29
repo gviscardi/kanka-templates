@@ -563,9 +563,101 @@
             </div>
             <div id="benefits-2" class="col-3">
                 <h3>Trasfondos</h3>
+                <ul id="backgrounds">
+                    <li class="benefit">
+                        <span class="label">{{ $background1 }}</span>
+                        <div class="points">
+                            @for($i=0; $i<$bg1points; $i++)
+                                <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                            @for($i=0; $i<5-$bg1points; $i++)
+                                <i class="far fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                        </div>
+                    </li>
+                    <li class="benefit">
+                        <span class="label">{{ $background2 }}</span>
+                        <div class="points">
+                            @for($i=0; $i<$bg2points; $i++)
+                                <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                            @for($i=0; $i<5-$bg2points; $i++)
+                                <i class="far fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                        </div>
+                    </li>
+                    <li class="benefit">
+                        <span class="label">{{ $background3 }}</span>
+                        <div class="points">
+                            @for($i=0; $i<$bg3points; $i++)
+                                <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                            @for($i=0; $i<5-$bg3points; $i++)
+                                <i class="far fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                        </div>
+                    </li>
+                    <li class="benefit">
+                        <span class="label">{{ $background4 }}</span>
+                        <div class="points">
+                            @for($i=0; $i<$bg4points; $i++)
+                                <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                            @for($i=0; $i<5-$bg4points; $i++)
+                                <i class="far fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                        </div>
+                    </li>
+                    <li class="benefit">
+                        <span class="label">{{ $background5 }}</span>
+                        <div class="points">
+                            @for($i=0; $i<$bg5points; $i++)
+                                <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                            @for($i=0; $i<5-$bg5points; $i++)
+                                <i class="far fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                        </div>
+                    </li>
+                </ul>
             </div>
             <div id="benefits-3" class="col-3">
                 <h3>Virtudes</h3>
+                <ul id="virtues">
+                    <li class="benefit">
+                        <span class="label">Conciencia/Convicción</span>
+                        <div class="points">
+                            @for($i=0; $i<$conscience; $i++)
+                                <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                            @for($i=0; $i<5-$conscience; $i++)
+                                <i class="far fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                        </div>
+                    </li>
+                    <li class="benefit">
+                        <span class="label">Autocontrol/Instinto</span>
+                        <div class="points">
+                            @for($i=0; $i<$selfControl; $i++)
+                                <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                            @for($i=0; $i<5-$selfControl; $i++)
+                                <i class="far fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                        </div>
+                    </li>
+                    <li class="benefit">
+                        <span class="label">Coraje</span>
+                        <div class="points">
+                            @for($i=0; $i<$courage; $i++)
+                                <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                            @for($i=0; $i<5-$courage; $i++)
+                                <i class="far fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
         <div id="tracks" class="row">
