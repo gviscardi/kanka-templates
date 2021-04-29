@@ -660,7 +660,7 @@
                 </ul>
             </div>
         </div>
-        <div id="tracks" class="row">
+        <div id="tracks" class="row justify-space-between">
             <div id="tracks-1" class="col-3">
                 <h3>Méritos y Defectos</h3>
                 <table class="meritsFlawsTable">
@@ -741,11 +741,11 @@
                     <h3>Humanidad/Senda</h3>
                     <p>{{ $path }}</p>
                     <div class="points">
-                        @for($i=0; $i<$path; $i++)
-                            <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
+                        @for($i=0; $i<$pathPts; $i++)
+                            <i class="fas fa-circle fa-sm" aria-hidden="true"></i>
                         @endfor
-                        @for($i=0; $i<10-$path; $i++)
-                            <i class="far fa-circle fa-xs" aria-hidden="true"></i>
+                        @for($i=0; $i<10-$pathPts; $i++)
+                            <i class="far fa-circle fa-sm" aria-hidden="true"></i>
                         @endfor
                     </div>
                     @if($bearing)
@@ -754,29 +754,34 @@
                 </div>
                 <div id="willpower">
                     <h3>Fuerza de voluntad</h3>
-                    <div class="points">
+                    <div class="points mb-2">
                         @for($i=0; $i<$willpower; $i++)
-                            <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
+                            <i class="fas fa-circle fa-sm" aria-hidden="true"></i>
                         @endfor
                         @for($i=0; $i<10-$willpower; $i++)
-                            <i class="far fa-circle fa-xs" aria-hidden="true"></i>
+                            <i class="far fa-circle fa-sm" aria-hidden="true"></i>
                         @endfor
+                    </div>
+                    <div class="points">
                         @for($i=0; $i<$willpowerCurrent; $i++)
-                            <i class="far fa-square fa-xs" aria-hidden="true"></i>
+                            <i class="far fa-times-square fa-sm" aria-hidden="true"></i>
                         @endfor
-                        @for($i=0; $i<10-$willpowerCurrent; $i++)
-                            <i class="fas fa-square fa-xs" aria-hidden="true"></i>
+                        @for($i=0; $i<$willpower-$willpowerCurrent; $i++)
+                            <i class="far fa-square fa-sm" aria-hidden="true"></i>
+                        @endfor
+                        @for($i=0; $i< 10 - $willpower; $i++)
+                            <i class="fas fa-square fa-sm" aria-hidden="true"></i>
                         @endfor
                     </div>
                 </div>
                 <div id="blood">
                     <h3>Reserva de sangre</h3>
-                    <div class="points">
+                    <div class="points mb-2">
                         @for($i=0; $i<$blood; $i++)
-                            <i class="fas fa-square fa-xs" aria-hidden="true"></i>
+                            <i class="fas fa-square fa-sm" aria-hidden="true"></i>
                         @endfor
                         @for($i=0; $i<20-$blood; $i++)
-                            <i class="far fa-square fa-xs" aria-hidden="true"></i>
+                            <i class="far fa-square fa-sm" aria-hidden="true"></i>
                         @endfor
                     </div>
                     <p>Sangre por turno: {{ $bloodPerTurn }}</p>
@@ -785,6 +790,85 @@
             <div id="tracks-3" class="col-3">
                 <div id="health">
                     <h3>Salud</h3>
+                    <table id="healthTable">
+                        <tr>
+                            <td class="condition">Magullado</td>
+                            <td class="modifier"></td>
+                            <td class="checkbox">
+                                @if($bruised == false)
+                                    <i class="far fa-square fa-sm" aria-hidden="true"></i>
+                                @else
+                                    <i class="far fa-times-square fa-sm" aria-hidden="true"></i>
+                                @endif
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="condition">Lastimado</td>
+                            <td class="modifier">-1</td>
+                            <td class="checkbox">
+                                @if($hurt == false)
+                                    <i class="far fa-square fa-sm" aria-hidden="true"></i>
+                                @else
+                                    <i class="far fa-times-square fa-sm" aria-hidden="true"></i>
+                                @endif
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="condition">Lesionado</td>
+                            <td class="modifier">-1</td>
+                            <td class="checkbox">
+                                @if($injured == false)
+                                    <i class="far fa-square fa-sm" aria-hidden="true"></i>
+                                @else
+                                    <i class="far fa-times-square fa-sm" aria-hidden="true"></i>
+                                @endif
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="condition">Herido</td>
+                            <td class="modifier">-2</td>
+                            <td class="checkbox">
+                                @if($wounded == false)
+                                    <i class="far fa-square fa-sm" aria-hidden="true"></i>
+                                @else
+                                    <i class="far fa-times-square fa-sm" aria-hidden="true"></i>
+                                @endif
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="condition">Malherido</td>
+                            <td class="modifier">-2</td>
+                            <td class="checkbox">
+                                @if($mauled == false)
+                                    <i class="far fa-square fa-sm" aria-hidden="true"></i>
+                                @else
+                                    <i class="far fa-times-square fa-sm" aria-hidden="true"></i>
+                                @endif
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="condition">Tullido</td>
+                            <td class="modifier">-5</td>
+                            <td class="checkbox">
+                                @if($crippled == false)
+                                    <i class="far fa-square fa-sm" aria-hidden="true"></i>
+                                @else
+                                    <i class="far fa-times-square fa-sm" aria-hidden="true"></i>
+                                @endif
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="condition">Incapacitado</td>
+                            <td class="modifier"></td>
+                            <td class="checkbox">
+                                @if($incapacitated == false)
+                                    <i class="far fa-square fa-sm" aria-hidden="true"></i>
+                                @else
+                                    <i class="far fa-times-square fa-sm" aria-hidden="true"></i>
+                                @endif
+                            </td>
+                        </tr>
+                    </table>
                 </div>
                 <div id="weakness">
                     <h3>Debilidad</h3>

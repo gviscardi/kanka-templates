@@ -59,6 +59,10 @@ main {
   }
 }
 
+.mb-2 {
+  margin-bottom: 8px;
+}
+
 /* Powers */
 ul {
   list-style-type: none;
@@ -106,4 +110,15 @@ ul li {
 }
 .meritsFlawsTable .mainCol {
   width: 75%;
+}
+
+#healthTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+#healthTable .condition {
+  width: 75%;
+}
+#healthTable .checkbox {
+  margin: 0 6px;
 }
