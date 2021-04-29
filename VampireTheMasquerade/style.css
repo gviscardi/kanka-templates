@@ -52,19 +52,14 @@ ul li {
 }
 .points {
   margin-left: 8px;
-  width: 40px;
-  height: 20px;
-  border: 1px solid black;
-  border-radius: 10%;
-  padding: 3px;
-  text-align: center;
-  font-size: small;
-  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 .attribute .label {
   display: flex;
   align-items: flex-end;
-  width: 95%;
+  width: 100%;
   color: black;
 }
 .attribute .label:after {

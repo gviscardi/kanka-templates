@@ -19,7 +19,7 @@
         </h1>
         <div id="overview" class="row">
             <div id="overview-1">
-                <p>Nombre: {{ $name }}</p>
+                <p>Nombre: {{ $charName }}</p>
                 <p>Jugador: {{ $player }}</p>
                 <p>Crónica: {{ $chronicle }}</p>
             </div>
@@ -39,21 +39,37 @@
             <div id="attributes-1" class="col">
                 <h3>Físicos</h3>
                 <ul>
-                    <li class="attribute"><span class="label">Fuerza</span>
+                    <li class="attribute">
+                        <span class="label">Fuerza</span>
                         <div class="points">
-                            {{ $STR }}
+                            @for($i=0; $i<$STR; $i++)
+                                <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                            @for($i=0; $i<5-$STR; $i++)
+                                <i class="fal fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Destreza</span>
                         <div class="points">
-                            {{ $DEX }}
+                            @for($i=0; $i<$DEX; $i++)
+                                <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                            @for($i=0; $i<5-$DEX; $i++)
+                                <i class="far fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Resistencia</span>
                         <div class="points">
-                            {{ $STA }}
+                            @for($i=0; $i<$STA; $i++)
+                                <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                            @for($i=0; $i<5-$STA; $i++)
+                                <i class="far fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
                         </div>
                     </li>
                 </ul>
@@ -64,19 +80,34 @@
                     <li class="attribute">
                         <span class="label">Carisma</span>
                         <div class="points">
-                            {{ $CHA }}
+                            @for($i=0; $i<$WIT; $i++)
+                                <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                            @for($i=0; $i<5-$WIT; $i++)
+                                <i class="far fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Manipulación</span>
                         <div class="points">
-                            {{ $MAN }}
+                            @for($i=0; $i<$MAN; $i++)
+                                <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                            @for($i=0; $i<5-$MAN; $i++)
+                                <i class="far fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Apariencia</span>
                         <div class="points">
-                            {{ $COM }}
+                            @for($i=0; $i<$COM; $i++)
+                                <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                            @for($i=0; $i<5-$COM; $i++)
+                                <i class="far fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
                         </div>
                     </li>
                 </ul>
@@ -87,19 +118,34 @@
                     <li class="attribute">
                         <span class="label">Percepción</span>
                         <div class="points">
-                            {{ $WIT }}
+                            @for($i=0; $i<$WIT; $i++)
+                                <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                            @for($i=0; $i<5-$WIT; $i++)
+                                <i class="far fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Inteligencia</span>
                         <div class="points">
-                            {{ $INT }}
+                            @for($i=0; $i<$INT; $i++)
+                                <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                            @for($i=0; $i<5-$INT; $i++)
+                                <i class="far fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Astucia</span>
                         <div class="points">
-                            {{ $RES }}
+                            @for($i=0; $i<$RES; $i++)
+                                <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                            @for($i=0; $i<5-$RES; $i++)
+                                <i class="far fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
                         </div>
                     </li>
                 </ul>
@@ -113,61 +159,111 @@
                     <li class="attribute">
                         <span class="label">Alerta</span>
                         <div class="points">
-                            {{ $alert }}
+                            @for($i=0; $i<$alert; $i++)
+                                <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                            @for($i=0; $i<5-$alert; $i++)
+                                <i class="far fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Atletismo</span>
                         <div class="points"> 
-                            {{ $athletics }}
+                            @for($i=0; $i<$athletics; $i++)
+                                <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                            @for($i=0; $i<5-$athletics; $i++)
+                                <i class="far fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Callejeo</span>
                         <div class="points">
-                            {{ $streetwise }}
+                            @for($i=0; $i<$streetwise; $i++)
+                                <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                            @for($i=0; $i<5-$streetwise; $i++)
+                                <i class="far fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Conciencia</span>
                         <div class="points"> 
-                            {{ $awareness }}
+                            @for($i=0; $i<$awareness; $i++)
+                                <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                            @for($i=0; $i<5-$awareness; $i++)
+                                <i class="far fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Empatía</span>
                         <div class="points">
-                            {{ $empathy }}
+                            @for($i=0; $i<$empathy; $i++)
+                                <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                            @for($i=0; $i<5-$empathy; $i++)
+                                <i class="far fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Expresión</span>
                         <div class="points">
-                            {{ $expression }}
+                            @for($i=0; $i<$expression; $i++)
+                                <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                            @for($i=0; $i<5-$expression; $i++)
+                                <i class="far fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Intimidación</span>
                         <div class="points"> 
-                            {{ $intimidation }}
+                            @for($i=0; $i<$intimidation; $i++)
+                                <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                            @for($i=0; $i<5-$intimidation; $i++)
+                                <i class="far fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Liderazgo</span>
                         <div class="points"> 
-                            {{ $leadership }}
+                            @for($i=0; $i<$leadership; $i++)
+                                <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                            @for($i=0; $i<5-$leadership; $i++)
+                                <i class="far fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Pelea</span>
                         <div class="points">
-                            {{ $brawl }}
+                            @for($i=0; $i<$brawl; $i++)
+                                <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                            @for($i=0; $i<5-$brawl; $i++)
+                                <i class="far fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Subterfugio</span>
                         <div class="points">
-                            {{ $subterfuge }}
+                            @for($i=0; $i<$subterfuge; $i++)
+                                <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                            @for($i=0; $i<5-$subterfuge; $i++)
+                                <i class="far fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
                         </div>
                     </li>
                 </ul>
@@ -178,61 +274,112 @@
                     <li class="attribute">
                         <span class="label">Armas de Fuego</span>
                         <div class="points">
-                            {{ $firearms }}
+                            @for($i=0; $i<$firearms; $i++)
+                                <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                            @for($i=0; $i<5-$firearms; $i++)
+                                <i class="far fa-circle fa-xs" aria-hidden="true"></i>
+                                @endfor
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Artesanía</span>
                         <div class="points"> 
-                            {{ $craft }}
+                            @for($i=0; $i<$craft; $i++)
+                                <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                            @for($i=0; $i<5-$craft; $i++)
+                                <i class="far fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Conducir</span>
                         <div class="points">
-                            {{ $drive }}
+                            @for($i=0; $i<$drive; $i++)
+                                <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                            @for($i=0; $i<5-$drive; $i++)
+                                <i class="far fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Etiqueta</span>
                         <div class="points"> 
-                            {{ $etiquette }}
+                            @for($i=0; $i<$etiquette; $i++)
+                                <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                            @for($i=0; $i<5-$etiquette; $i++)
+                                <i class="far fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Interpretación</span>
                         <div class="points">
-                            {{ $performance }}
+                            @for($i=0; $i<$performance; $i++)
+                                <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                            @for($i=0; $i<5-$performance; $i++)
+                                <i class="far fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Latrocinio</span>
                         <div class="points">
-                            {{ $larceny }}
+                            @for($i=0; $i<$larceny; $i++)
+                                <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                            @for($i=0; $i<5-$larceny; $i++)
+                                <i class="far fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Pelea con armas</span>
                         <div class="points"> 
                             {{ $melee }}
+                            @for($i=0; $i<$melee; $i++)
+                                <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                            @for($i=0; $i<5-$melee; $i++)
+                                <i class="far fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Sigilo</span>
                         <div class="points"> 
-                            {{ $stealth }}
+                            @for($i=0; $i<$stealth; $i++)
+                                <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                            @for($i=0; $i<5-$stealth; $i++)
+                                <i class="far fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Supervivencia</span>
                         <div class="points">
-                            {{ $survival }}
+                            @for($i=0; $i<$survival; $i++)
+                                <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                            @for($i=0; $i<5-$survival; $i++)
+                                <i class="far fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Trato con Animales</span>
                         <div class="points">
-                            {{ $animalKen }}
+                            @for($i=0; $i<$animalKen; $i++)
+                                <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                            @for($i=0; $i<5-$animalKen; $i++)
+                                <i class="far fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
                         </div>
                     </li>
                 </ul>
@@ -243,61 +390,111 @@
                     <li class="attribute">
                         <span class="label">Academicismo</span>
                         <div class="points">
-                            {{ $academics }}
+                            @for($i=0; $i<$academics; $i++)
+                                <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                            @for($i=0; $i<5-$academics; $i++)
+                                <i class="far fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Ciencias</span>
                         <div class="points"> 
-                            {{ $science }}
+                            @for($i=0; $i<$science; $i++)
+                                <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                            @for($i=0; $i<5-$science; $i++)
+                                <i class="far fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Finanzas</span>
                         <div class="points">
-                            {{ $finance }}
+                            @for($i=0; $i<$finance; $i++)
+                                <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                            @for($i=0; $i<5-$finance; $i++)
+                                <i class="far fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Informática</span>
                         <div class="points"> 
-                            {{ $computer }}
+                            @for($i=0; $i<$computer; $i++)
+                                <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                            @for($i=0; $i<5-$computer; $i++)
+                                <i class="far fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Investigación</span>
                         <div class="points">
-                            {{ $investigation }}
+                            @for($i=0; $i<$investigation; $i++)
+                                <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                            @for($i=0; $i<5-$investigation; $i++)
+                                <i class="far fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Leyes</span>
                         <div class="points">
-                            {{ $law }}
+                            @for($i=0; $i<$law; $i++)
+                                <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                            @for($i=0; $i<5-$law; $i++)
+                                <i class="far fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Medicina</span>
                         <div class="points"> 
-                            {{ $medicine }}
+                            @for($i=0; $i<$medicine; $i++)
+                                <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                            @for($i=0; $i<5-$medicine; $i++)
+                                <i class="far fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Ocultismo</span>
                         <div class="points"> 
-                            {{ $occult }}
+                            @for($i=0; $i<$occult; $i++)
+                                <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                            @for($i=0; $i<5-$occult; $i++)
+                                <i class="far fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Política</span>
                         <div class="points">
-                            {{ $politics }}
+                            @for($i=0; $i<$politics; $i++)
+                                <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                            @for($i=0; $i<5-$politics; $i++)
+                                <i class="far fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
                         </div>
                     </li>
                     <li class="attribute">
                         <span class="label">Tecnología</span>
                         <div class="points">
-                            {{ $technology }}
+                            @for($i=0; $i<$technology; $i++)
+                                <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                            @for($i=0; $i<5-$technology; $i++)
+                                <i class="far fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
                         </div>
                     </li>
                 </ul>
@@ -345,17 +542,10 @@
                 <div id="xp">
                     <h3>Experiencia</h3>
                     <div>
-                        @foreach($XP as $xp)
-                            <p>o</p>
-                        @endforeach
                     </div>
                 </div>
             </div>
         </div>
     </main>
-    <script>
-        /* Testing stuff */
-        var XP = 3
-    </script>
 </body>
 </html>
