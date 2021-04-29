@@ -503,9 +503,61 @@
             <h2>Ventajas</h2>
             <div id="benefits-1" class="col-3">
                 <h3>Disciplinas</h3>
-                <ul>
-                    <li class="attribute">
-                        
+                <ul id="disciplines">
+                    <li class="benefit">
+                        <span class="label">{{ $discipline1 }}</span>
+                        <div class="points">
+                            @for($i=0; $i<$disc1points; $i++)
+                                <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                            @for($i=0; $i<5-$disc1points; $i++)
+                                <i class="far fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                        </div>
+                    </li>
+                    <li class="benefit">
+                        <span class="label">{{ $discipline2 }}</span>
+                        <div class="points">
+                            @for($i=0; $i<$disc2points; $i++)
+                                <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                            @for($i=0; $i<5-$disc2points; $i++)
+                                <i class="far fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                        </div>
+                    </li>
+                    <li class="benefit">
+                        <span class="label">{{ $discipline3 }}</span>
+                        <div class="points">
+                            @for($i=0; $i<$disc3points; $i++)
+                                <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                            @for($i=0; $i<5-$disc3points; $i++)
+                                <i class="far fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                        </div>
+                    </li>
+                    <li class="benefit">
+                        <span class="label">{{ $discipline4 }}</span>
+                        <div class="points">
+                            @for($i=0; $i<$disc4points; $i++)
+                                <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                            @for($i=0; $i<5-$disc4points; $i++)
+                                <i class="far fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                        </div>
+                    </li>
+                    <li class="benefit">
+                        <span class="label">{{ $discipline5 }}</span>
+                        <div class="points">
+                            @for($i=0; $i<$disc5points; $i++)
+                                <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                            @for($i=0; $i<5-$disc5points; $i++)
+                                <i class="far fa-circle fa-xs" aria-hidden="true"></i>
+                            @endfor
+                        </div>
                     </li>
                 </ul>
             </div>

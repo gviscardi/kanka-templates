@@ -67,7 +67,8 @@ ul {
 ul li {
   padding: 5px;
 }
-.attribute {
+.attribute,
+.benefit {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -79,14 +80,17 @@ ul li {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  color: black;
 }
-.attribute .label {
+.attribute .label,
+.benefit .label {
   display: flex;
   align-items: flex-end;
   width: 100%;
   color: black;
 }
-.attribute .label:after {
+.attribute .label:after,
+.benefit .label:after {
   margin-left: 4px;
   border-bottom: 1px solid black;
   content: '';
