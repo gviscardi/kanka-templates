@@ -739,12 +739,47 @@
             <div id="tracks-2" class="col-3">
                 <div id="path">
                     <h3>Humanidad/Senda</h3>
+                    <p>{{ $path }}</p>
+                    <div class="points">
+                        @for($i=0; $i<$path; $i++)
+                            <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
+                        @endfor
+                        @for($i=0; $i<10-$path; $i++)
+                            <i class="far fa-circle fa-xs" aria-hidden="true"></i>
+                        @endfor
+                    </div>
+                    @if($bearing)
+                    <p>Porte: {{ $bearing }}</p>
+                    @endif
                 </div>
                 <div id="willpower">
                     <h3>Fuerza de voluntad</h3>
+                    <div class="points">
+                        @for($i=0; $i<$willpower; $i++)
+                            <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
+                        @endfor
+                        @for($i=0; $i<10-$willpower; $i++)
+                            <i class="far fa-circle fa-xs" aria-hidden="true"></i>
+                        @endfor
+                        @for($i=0; $i<$willpowerCurrent; $i++)
+                            <i class="far fa-square fa-xs" aria-hidden="true"></i>
+                        @endfor
+                        @for($i=0; $i<10-$willpowerCurrent; $i++)
+                            <i class="fas fa-square fa-xs" aria-hidden="true"></i>
+                        @endfor
+                    </div>
                 </div>
                 <div id="blood">
                     <h3>Reserva de sangre</h3>
+                    <div class="points">
+                        @for($i=0; $i<$blood; $i++)
+                            <i class="fas fa-square fa-xs" aria-hidden="true"></i>
+                        @endfor
+                        @for($i=0; $i<20-$blood; $i++)
+                            <i class="far fa-square fa-xs" aria-hidden="true"></i>
+                        @endfor
+                    </div>
+                    <p>Sangre por turno: {{ $bloodPerTurn }}</p>
                 </div>
             </div>
             <div id="tracks-3" class="col-3">
