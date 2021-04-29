@@ -96,3 +96,14 @@ ul li {
   content: '';
   flex: 1;
 }
+
+.meritsFlawsTable {
+  width: 100%;
+  border-spacing: 20px;
+}
+.meritsFlawsTable th {
+  text-align: left;
+}
+.meritsFlawsTable .mainCol {
+  width: 75%;
+}

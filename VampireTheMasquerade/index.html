@@ -46,7 +46,7 @@
                                 <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
                             @endfor
                             @for($i=0; $i<5-$STR; $i++)
-                                <i class="fal fa-circle fa-xs" aria-hidden="true"></i>
+                                <i class="far fa-circle fa-xs" aria-hidden="true"></i>
                             @endfor
                         </div>
                     </li>
@@ -663,6 +663,78 @@
         <div id="tracks" class="row">
             <div id="tracks-1" class="col-3">
                 <h3>Méritos y Defectos</h3>
+                <table class="meritsFlawsTable">
+                    <tr class="headerRow">
+                        <th class="mainCol">Méritos</th>
+                        <th class="costCol">Coste</th>
+                    </tr>
+                    @if($merit1)
+                    <tr>
+                        <td>{{ $merit1 }}</td>
+                        <td>{{ $merit1pts }}</td>
+                    </tr>
+                    @endif
+                    @if($merit2)
+                    <tr>
+                        <td>{{ $merit2 }}</td>
+                        <td>{{ $merit2pts }}</td>
+                    </tr>
+                    @endif
+                    @if($merit3)
+                    <tr>
+                        <td>{{ $merit3 }}</td>
+                        <td>{{ $merit3pts }}</td>
+                    </tr>
+                    @endif
+                    @if($merit4)
+                    <tr>
+                        <td>{{ $merit4 }}</td>
+                        <td>{{ $merit4pts }}</td>
+                    </tr>
+                    @endif
+                    @isf($merit5)
+                    <tr>
+                        <td>{{ $merit5 }}</td>
+                        <td>{{ $merit5pts }}</td>
+                    </tr>
+                    @endif
+                </table>
+                <table class="meritsFlawsTable">
+                    <tr class="headerRow">
+                        <th class="mainCol">Defectos</th>
+                        <th class="costCol">Coste</th>
+                    </tr>
+                    @if($flaw1)
+                    <tr>
+                        <td>{{ $flaw1 }}</td>
+                        <td>{{ $flaw1pts }}</td>
+                    </tr>
+                    @endif
+                    @if($flaw2)
+                    <tr>
+                        <td>{{ $flaw2 }}</td>
+                        <td>{{ $flaw2pts }}</td>
+                    </tr>
+                    @endif
+                    @if($flaw3)
+                    <tr>
+                        <td>{{ $flaw3 }}</td>
+                        <td>{{ $flaw3pts }}</td>
+                    </tr>
+                    @endif
+                    @if($flaw4)
+                    <tr>
+                        <td>{{ $flaw4 }}</td>
+                        <td>{{ $flaw4pts }}</td>
+                    </tr>
+                    @endif
+                    @isf($flaw5)
+                    <tr>
+                        <td>{{ $flaw5 }}</td>
+                        <td>{{ $flaw5pts }}</td>
+                    </tr>
+                    @endif
+                </table>
             </div>
             <div id="tracks-2" class="col-3">
                 <div id="path">
