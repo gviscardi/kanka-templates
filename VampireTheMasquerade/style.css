@@ -12,6 +12,11 @@ h3 {
   font-size: 50%;
 }
 
+/* Typography */
+.bold {
+  font-weight: bold;
+}
+
 /* Layout */
 main {
   max-width: 960px;
@@ -23,16 +28,35 @@ main {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
 }
 .row h2 {
   width: 100%;
   margin-bottom: 0;
 }
+.justify-space-around {
+  justify-content: space-around;
+}
+.justify-space-between {
+  justify-content: space-between;
+}
+.justify-space-evenly {
+  justify-content: space-evenly;
+}
+
 .col {
-  width: 33%;
+  display: flex;
+  flex-direction: column;
+}
+
+.col-3 {
+  width: 100%;
   padding: 8px 12px;
   box-sizing: border-box;
+}
+@media only screen and (min-width: 600px) {
+  .col-3 {
+    width: 300px;
+  }
 }
 
 /* Powers */

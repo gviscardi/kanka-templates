@@ -17,26 +17,26 @@
             <br>
             <span class="subtitle">La Mascarada</span>
         </h1>
-        <ul id="overview" class="row">
-            <div id="overview-1">
+        <div id="overview" class="row justify-space-between">
+            <ul id="overview-1" class="col">
                 <li><span class="bold">Nombre:</span> {{ $charName }}</li>
                 <li><span class="bold">Jugador:</span> {{ $player }}</li>
                 <li><span class="bold">Crónica:</span> {{ $chronicle }}</li>
-            </div>
-            <div id="overview-2">
+            </ul>
+            <ul id="overview-2" class="col">
                 <li><span class="bold">Naturaleza:</span> {{ $nature }}</li>
                 <li><span class="bold">Conducta:</span> {{ $conduct }}</li>
                 <li><span class="bold">Concepto:</span> {{ $concept }}</li>
-            </div>
-            <div id="overview-3">
-                <li>Clan: {{ $clan }}</li>
-                <li>Generación: {{ $generation }}</li>
-                <li>Sire: {{ $sire }}</li>
-            </div>
-        </ul>
-        <div id="attributes" class="row">
+            </ul>
+            <ul id="overview-3" class="col">
+                <li><span class="bold">Clan:</span> {{ $clan }}</li>
+                <li><span class="bold">Generación:</span> {{ $generation }}</li>
+                <li><span class="bold">Sire:</span> {{ $sire }}</li>
+            </ul>
+        </div>
+        <div id="attributes" class="row justify-space-between">
             <h2>Atributos</h2>
-            <div id="attributes-1" class="col">
+            <div id="attributes-1" class="col-3">
                 <h3>Físicos</h3>
                 <ul>
                     <li class="attribute">
@@ -74,7 +74,7 @@
                     </li>
                 </ul>
             </div>
-            <div id="attributes-2" class="col">
+            <div id="attributes-2" class="col-3">
                 <h3>Sociales</h3>
                 <ul>
                     <li class="attribute">
@@ -112,7 +112,7 @@
                     </li>
                 </ul>
             </div>
-            <div id="attributes-3" class="col">
+            <div id="attributes-3" class="col-3">
                 <h3>Mentales</h3>
                 <ul>
                     <li class="attribute">
@@ -151,9 +151,9 @@
                 </ul>
             </div>
         </div>
-        <div id="abilities" class="row">
+        <div id="abilities" class="row justify-space-between">
             <h2>Habilidades</h2>
-            <div id="abilities-1" class="col">
+            <div id="abilities-1" class="col-3">
                 <h3>Talentos</h3>
                 <ul>
                     <li class="attribute">
@@ -268,7 +268,7 @@
                     </li>
                 </ul>
             </div>
-            <div id="abilities-2" class="col">
+            <div id="abilities-2" class="col-3">
                 <h3>Técnicas</h3>
                     <ul>
                     <li class="attribute">
@@ -383,7 +383,7 @@
                     </li>
                 </ul>
             </div>
-            <div id="abilities-3" class="col">
+            <div id="abilities-3" class="col-3">
                 <h3>Conocimientos</h3>
                 <ul>
                     <li class="attribute">
@@ -499,9 +499,9 @@
                 </ul>
             </div>
         </div>
-        <div id="benefits" class="row">
+        <div id="benefits" class="row justify-space-between">
             <h2>Ventajas</h2>
-            <div id="benefits-1" class="col">
+            <div id="benefits-1" class="col-3">
                 <h3>Disciplinas</h3>
                 <ul>
                     <li class="attribute">
@@ -509,18 +509,18 @@
                     </li>
                 </ul>
             </div>
-            <div id="benefits-2" class="col">
+            <div id="benefits-2" class="col-3">
                 <h3>Trasfondos</h3>
             </div>
-            <div id="benefits-3" class="col">
+            <div id="benefits-3" class="col-3">
                 <h3>Virtudes</h3>
             </div>
         </div>
         <div id="tracks" class="row">
-            <div id="tracks-1" class="col">
+            <div id="tracks-1" class="col-3">
                 <h3>Méritos y Defectos</h3>
             </div>
-            <div id="tracks-2" class="col">
+            <div id="tracks-2" class="col-3">
                 <div id="path">
                     <h3>Humanidad/Senda</h3>
                 </div>
@@ -531,7 +531,7 @@
                     <h3>Reserva de sangre</h3>
                 </div>
             </div>
-            <div id="tracks-3" class="col">
+            <div id="tracks-3" class="col-3">
                 <div id="health">
                     <h3>Salud</h3>
                 </div>
