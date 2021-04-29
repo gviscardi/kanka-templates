@@ -17,23 +17,23 @@
             <br>
             <span class="subtitle">La Mascarada</span>
         </h1>
-        <div id="overview" class="row">
+        <ul id="overview" class="row">
             <div id="overview-1">
-                <p>Nombre: {{ $charName }}</p>
-                <p>Jugador: {{ $player }}</p>
-                <p>Crónica: {{ $chronicle }}</p>
+                <li><span class="bold">Nombre:</span> {{ $charName }}</li>
+                <li><span class="bold">Jugador:</span> {{ $player }}</li>
+                <li><span class="bold">Crónica:</span> {{ $chronicle }}</li>
             </div>
             <div id="overview-2">
-                <p>Naturaleza: {{ $nature }}</p>
-                <p>Conducta: {{ $conduct }}</p>
-                <p>Concepto: {{ $concept }}</p>
+                <li><span class="bold">Naturaleza:</span> {{ $nature }}</li>
+                <li><span class="bold">Conducta:</span> {{ $conduct }}</li>
+                <li><span class="bold">Concepto:</span> {{ $concept }}</li>
             </div>
             <div id="overview-3">
-                <p>Clan: {{ $clan }}</p>
-                <p>Generación: {{ $generation }}</p>
-                <p>Sire: {{ $sire }}</p>
+                <li>Clan: {{ $clan }}</li>
+                <li>Generación: {{ $generation }}</li>
+                <li>Sire: {{ $sire }}</li>
             </div>
-        </div>
+        </ul>
         <div id="attributes" class="row">
             <h2>Atributos</h2>
             <div id="attributes-1" class="col">
