@@ -764,7 +764,7 @@
                     </div>
                     <div class="points">
                         @for($i=0; $i<$willpowerCurrent; $i++)
-                            <i class="far fa-times-square fa-sm" aria-hidden="true"></i>
+                            <i class="far fa-check-square fa-sm" aria-hidden="true"></i>
                         @endfor
                         @for($i=0; $i<$willpower-$willpowerCurrent; $i++)
                             <i class="far fa-square fa-sm" aria-hidden="true"></i>
@@ -777,10 +777,10 @@
                 <div id="blood">
                     <h3>Reserva de sangre</h3>
                     <div class="points mb-2">
-                        @for($i=0; $i<$blood; $i++)
-                            <i class="fas fa-square fa-sm" aria-hidden="true"></i>
+                        @for($i=0; $i<$bloodConsumed; $i++)
+                            <i class="far fa-check-square fa-sm" aria-hidden="true"></i>
                         @endfor
-                        @for($i=0; $i<20-$blood; $i++)
+                        @for($i=0; $i<20-$bloodConsumed; $i++)
                             <i class="far fa-square fa-sm" aria-hidden="true"></i>
                         @endfor
                     </div>
@@ -798,7 +798,7 @@
                                 @if($bruised == false)
                                     <i class="far fa-square fa-sm" aria-hidden="true"></i>
                                 @else
-                                    <i class="far fa-times-square fa-sm" aria-hidden="true"></i>
+                                    <i class="far fa-check-square fa-sm" aria-hidden="true"></i>
                                 @endif
                             </td>
                         </tr>
@@ -809,7 +809,7 @@
                                 @if($hurt == false)
                                     <i class="far fa-square fa-sm" aria-hidden="true"></i>
                                 @else
-                                    <i class="far fa-times-square fa-sm" aria-hidden="true"></i>
+                                    <i class="far fa-check-square fa-sm" aria-hidden="true"></i>
                                 @endif
                             </td>
                         </tr>
@@ -820,7 +820,7 @@
                                 @if($injured == false)
                                     <i class="far fa-square fa-sm" aria-hidden="true"></i>
                                 @else
-                                    <i class="far fa-times-square fa-sm" aria-hidden="true"></i>
+                                    <i class="far fa-check-square fa-sm" aria-hidden="true"></i>
                                 @endif
                             </td>
                         </tr>
@@ -831,7 +831,7 @@
                                 @if($wounded == false)
                                     <i class="far fa-square fa-sm" aria-hidden="true"></i>
                                 @else
-                                    <i class="far fa-times-square fa-sm" aria-hidden="true"></i>
+                                    <i class="far fa-check-square fa-sm" aria-hidden="true"></i>
                                 @endif
                             </td>
                         </tr>
@@ -842,7 +842,7 @@
                                 @if($mauled == false)
                                     <i class="far fa-square fa-sm" aria-hidden="true"></i>
                                 @else
-                                    <i class="far fa-times-square fa-sm" aria-hidden="true"></i>
+                                    <i class="far fa-check-square fa-sm" aria-hidden="true"></i>
                                 @endif
                             </td>
                         </tr>
@@ -853,7 +853,7 @@
                                 @if($crippled == false)
                                     <i class="far fa-square fa-sm" aria-hidden="true"></i>
                                 @else
-                                    <i class="far fa-times-square fa-sm" aria-hidden="true"></i>
+                                    <i class="far fa-check-square fa-sm" aria-hidden="true"></i>
                                 @endif
                             </td>
                         </tr>
@@ -864,7 +864,7 @@
                                 @if($incapacitated == false)
                                     <i class="far fa-square fa-sm" aria-hidden="true"></i>
                                 @else
-                                    <i class="far fa-times-square fa-sm" aria-hidden="true"></i>
+                                    <i class="far fa-check-square fa-sm" aria-hidden="true"></i>
                                 @endif
                             </td>
                         </tr>
