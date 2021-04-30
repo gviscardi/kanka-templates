@@ -22,7 +22,7 @@ main {
   max-width: 960px;
   margin: 0 auto;
   padding: 12px;
-  border: 2px dashed darkcyan;
+  background-image: url('https://i.imgur.com/1w0YPnF.png');
 }
 .row {
   display: flex;
@@ -99,6 +99,16 @@ ul li {
   border-bottom: 1px solid black;
   content: '';
   flex: 1;
+}
+#bloodTrack {
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+#bloodTrack .boxWrapper {
+  margin-bottom: 8px;
+  width: 10%;
+  display: flex;
+  justify-content: center;
 }
 
 .meritsFlawsTable {

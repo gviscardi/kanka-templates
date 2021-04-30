@@ -776,12 +776,16 @@
                 </div>
                 <div id="blood">
                     <h3>Reserva de sangre</h3>
-                    <div class="points mb-2">
+                    <div id="bloodTrack" class="points mb-2">
                         @for($i=0; $i<$bloodConsumed; $i++)
-                            <i class="far fa-check-square fa-sm" aria-hidden="true"></i>
+                            <div class="boxWrapper">
+                                <i class="far fa-check-square fa-sm" aria-hidden="true"></i>
+                            </div>
                         @endfor
                         @for($i=0; $i<20-$bloodConsumed; $i++)
-                            <i class="far fa-square fa-sm" aria-hidden="true"></i>
+                            <div class="boxWrapper">
+                                <i class="far fa-square fa-sm" aria-hidden="true"></i>
+                            </div>
                         @endfor
                     </div>
                     <p>Sangre por turno: {{ $bloodPerTurn }}</p>
