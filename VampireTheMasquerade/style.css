@@ -1,12 +1,11 @@
-body {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@700&family=Cormorant:ital@0;1&display=swap');
 
 /* Headings */
-h1,
-h2,
-h3 {
+h1.sheet-h1,
+h2.sheet-h2,
+h3.sheet-h3 {
   text-align: center;
+  font-family: 'Bodoni Moda', serif;
 }
 .subtitle {
   font-size: 50%;
@@ -14,16 +13,19 @@ h3 {
 
 /* Typography */
 .bold {
-  font-weight: bold;
+  font-family: 'Bodoni Moda', serif;
 }
 
 /* Layout */
 main {
   max-width: 960px;
+}
+.VtM-CharSheet {
   margin: 0 auto;
   padding: 12px;
-  background-image: url('https://i.imgur.com/1w0YPnF.png');
+  font-family: 'Cormorant', Georgia, 'Times New Roman', Times, serif;
 }
+
 .row {
   display: flex;
   flex-direction: row;
@@ -91,6 +93,7 @@ ul li {
   display: flex;
   align-items: flex-end;
   width: 100%;
+  font-size: 100%;
   color: black;
 }
 .attribute .label:after,
