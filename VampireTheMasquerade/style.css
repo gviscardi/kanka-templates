@@ -86,27 +86,24 @@ ul li {
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: baseline;
-  background-color: transparent;
 }
 .points {
   margin-left: 8px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  color: black;
 }
-.vtm-attribute .label,
-.benefit .label {
+.vtm-attribute .vtm-label,
+.benefit .vtm-label {
   display: flex;
-  align-items: flex-end;
+  align-items: baseline;
   width: 100%;
   padding: 0;
   font-size: 100%;
   font-style: normal;
-  color: black;
 }
-.vtm-attribute .label:after,
-.benefit .label:after {
+.vtm-attribute .vtm-label:after,
+.benefit .vtm-label:after {
   margin-left: 4px;
   border-bottom: 1px solid black;
   content: '';
@@ -133,7 +130,23 @@ ul li {
   text-align: left;
 }
 .meritsFlawsTable .mainCol {
-  width: 75%;
+  width: 85%;
+}
+/* .meritsFlawsTable .nameCol {
+  display: flex;
+  align-items: baseline;
+  width: 100%;
+  padding: 0;
+}
+.meritsFlawsTable .nameCol::after {
+  margin-left: 4px;
+  border-bottom: 1px solid black;
+  content: '';
+  flex: 1;
+} */
+.meritsFlawsTable .costCol,
+.meritsFlawsTable .ptsCol {
+  text-align: center;
 }
 
 /* Health */
@@ -142,7 +155,7 @@ ul li {
   border-collapse: collapse;
 }
 #healthTable .condition {
-  width: 75%;
+  width: 85%;
 }
 #healthTable .checkbox {
   margin: 0 6px;
