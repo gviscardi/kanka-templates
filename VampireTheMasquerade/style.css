@@ -128,7 +128,8 @@ ul li {
 .meritsFlawsTable {
   width: 100%;
   border-spacing: 20px;
-  margin-top: 8px;
+  margin-top: 12px;
+  font-size: larger;
 }
 .meritsFlawsTable th {
   text-align: left;
@@ -157,6 +158,7 @@ ul li {
 #healthTable {
   width: 100%;
   border-collapse: collapse;
+  font-size: larger;
 }
 #healthTable .condition {
   width: 85%;
