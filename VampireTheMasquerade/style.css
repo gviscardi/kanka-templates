@@ -1,9 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@700&family=Cormorant:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@700&family=Cormorant:ital@0;1&family=Cinzel&display=swap');
 
 /* Headings */
-h1.sheet-h1,
-h2.sheet-h2,
-h3.sheet-h3 {
+h1.vtm-h1 {
+  text-align: center;
+  font-family: 'Cinzel', Cambria, Times, serif;
+  margin-top: 0;
+}
+
+h2.vtm-h2,
+h3.vtm-h3 {
   text-align: center;
   font-family: 'Bodoni Moda', serif;
 }
@@ -24,6 +29,7 @@ main {
   margin: 0 auto;
   padding: 12px;
   font-family: 'Cormorant', Georgia, 'Times New Roman', Times, serif;
+  color: black;
 }
 
 .row {
@@ -73,12 +79,13 @@ ul {
 ul li {
   padding: 5px;
 }
-.attribute,
+.vtm-attribute,
 .benefit {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
+  align-items: baseline;
   background-color: transparent;
 }
 .points {
@@ -88,15 +95,17 @@ ul li {
   justify-content: space-evenly;
   color: black;
 }
-.attribute .label,
+.vtm-attribute .label,
 .benefit .label {
   display: flex;
   align-items: flex-end;
   width: 100%;
+  padding: 0;
   font-size: 100%;
+  font-style: normal;
   color: black;
 }
-.attribute .label:after,
+.vtm-attribute .label:after,
 .benefit .label:after {
   margin-left: 4px;
   border-bottom: 1px solid black;
@@ -114,9 +123,11 @@ ul li {
   justify-content: center;
 }
 
+/* Merits & Flaws */
 .meritsFlawsTable {
   width: 100%;
   border-spacing: 20px;
+  margin-top: 8px;
 }
 .meritsFlawsTable th {
   text-align: left;
@@ -125,6 +136,7 @@ ul li {
   width: 75%;
 }
 
+/* Health */
 #healthTable {
   width: 100%;
   border-collapse: collapse;
@@ -134,4 +146,12 @@ ul li {
 }
 #healthTable .checkbox {
   margin: 0 6px;
+}
+
+/* Weakness & XP */
+.p-center {
+  text-align: center;
+}
+.p-large {
+  font-size: large;
 }
