@@ -20,6 +20,9 @@ h3.vtm-h3 {
 .bold {
   font-family: 'Bodoni Moda', serif;
 }
+#overview ul li {
+  font-size: larger;
+}
 
 /* Layout */
 main {
@@ -100,6 +103,7 @@ ul li {
   width: 100%;
   padding: 0;
   font-size: 100%;
+  font-size: larger;
   font-style: normal;
 }
 .vtm-attribute .vtm-label:after,

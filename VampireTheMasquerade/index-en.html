@@ -741,7 +741,9 @@
                 <div id="tracks-2" class="col-3">
                     <div id="path">
                         <h3 class="vtm-h3">Humanity/Path</h3>
-                        <p>{{ $path }}</p>
+                        @if($path)
+                        <p class="p-center bold">{{ $path }}</p>
+                        @endif
                         <div class="points">
                             @for($i=0; $i<$pathPts; $i++)
                                 <i class="fas fa-circle fa-sm" aria-hidden="true"></i>
@@ -751,7 +753,7 @@
                             @endfor
                         </div>
                         @if($bearing)
-                        <p>Bearing: {{ $bearing }}</p>
+                        <p class="p-center">Bearing: {{ $bearing }}</p>
                         @endif
                     </div>
                     <div id="willpower">
