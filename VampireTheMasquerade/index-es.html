@@ -13,7 +13,7 @@
 
 <body>
     <main>
-        <!-- The code to paste on Kanka starts here -->
+        <!-- El código para pegar en Kanka empieza aquí -->
         <div class="VtM-CharSheet">
             <h1 class="vtm-h1">Vampiro
                 <br>
@@ -21,18 +21,18 @@
             </h1>
             <div id="overview" class="row justify-space-between">
                 <ul id="overview-1" class="col-3">
-                    <li><span class="bold">Nombre:</span> {{ $charName }}</li>
-                    <li><span class="bold">Jugador:</span> {{ $player }}</li>
-                    <li><span class="bold">Crónica:</span> {{ $chronicle }}</li>
+                    <li><span class="bold">Nombre:</span> {{ $nombre }}</li>
+                    <li><span class="bold">Jugador:</span> {{ $jugador }}</li>
+                    <li><span class="bold">Crónica:</span> {{ $cronica }}</li>
                 </ul>
                 <ul id="overview-2" class="col-3">
-                    <li><span class="bold">Naturaleza:</span> {{ $nature }}</li>
-                    <li><span class="bold">Conducta:</span> {{ $conduct }}</li>
-                    <li><span class="bold">Concepto:</span> {{ $concept }}</li>
+                    <li><span class="bold">Naturaleza:</span> {{ $naturaleza }}</li>
+                    <li><span class="bold">Conducta:</span> {{ $conducta }}</li>
+                    <li><span class="bold">Concepto:</span> {{ $concepto }}</li>
                 </ul>
                 <ul id="overview-3" class="col-3">
                     <li><span class="bold">Clan:</span> {{ $clan }}</li>
-                    <li><span class="bold">Generación:</span> {{ $generation }}</li>
+                    <li><span class="bold">Generación:</span> {{ $generacion }}</li>
                     <li><span class="bold">Sire:</span> {{ $sire }}</li>
                 </ul>
             </div>
@@ -44,10 +44,10 @@
                         <li class="vtm-attribute">
                             <span class="vtm-label">Fuerza</span>
                             <div class="points">
-                                @for($i=0; $i<$STR; $i++)
+                                @for($i=0; $i<$fuerza; $i++)
                                     <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
-                                @for($i=0; $i<5-$STR; $i++)
+                                @for($i=0; $i<5-$fuerza; $i++)
                                     <i class="far fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
                             </div>
@@ -55,10 +55,10 @@
                         <li class="vtm-attribute">
                             <span class="vtm-label">Destreza</span>
                             <div class="points">
-                                @for($i=0; $i<$DEX; $i++)
+                                @for($i=0; $i<$destreza; $i++)
                                     <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
-                                @for($i=0; $i<5-$DEX; $i++)
+                                @for($i=0; $i<5-$destreza; $i++)
                                     <i class="far fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
                             </div>
@@ -66,10 +66,10 @@
                         <li class="vtm-attribute">
                             <span class="vtm-label">Resistencia</span>
                             <div class="points">
-                                @for($i=0; $i<$STA; $i++)
+                                @for($i=0; $i<$resistencia; $i++)
                                     <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
-                                @for($i=0; $i<5-$STA; $i++)
+                                @for($i=0; $i<5-$resistencia; $i++)
                                     <i class="far fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
                             </div>
@@ -82,10 +82,10 @@
                         <li class="vtm-attribute">
                             <span class="vtm-label">Carisma</span>
                             <div class="points">
-                                @for($i=0; $i<$WIT; $i++)
+                                @for($i=0; $i<$carisma; $i++)
                                     <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
-                                @for($i=0; $i<5-$WIT; $i++)
+                                @for($i=0; $i<5-$carisma; $i++)
                                     <i class="far fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
                             </div>
@@ -93,10 +93,10 @@
                         <li class="vtm-attribute">
                             <span class="vtm-label">Manipulación</span>
                             <div class="points">
-                                @for($i=0; $i<$MAN; $i++)
+                                @for($i=0; $i<$manipulacion; $i++)
                                     <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
-                                @for($i=0; $i<5-$MAN; $i++)
+                                @for($i=0; $i<5-$manipulacion; $i++)
                                     <i class="far fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
                             </div>
@@ -104,10 +104,10 @@
                         <li class="vtm-attribute">
                             <span class="vtm-label">Apariencia</span>
                             <div class="points">
-                                @for($i=0; $i<$COM; $i++)
+                                @for($i=0; $i<$apariencia; $i++)
                                     <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
-                                @for($i=0; $i<5-$COM; $i++)
+                                @for($i=0; $i<5-$apariencia; $i++)
                                     <i class="far fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
                             </div>
@@ -120,10 +120,10 @@
                         <li class="vtm-attribute">
                             <span class="vtm-label">Percepción</span>
                             <div class="points">
-                                @for($i=0; $i<$WIT; $i++)
+                                @for($i=0; $i<$percepcion; $i++)
                                     <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
-                                @for($i=0; $i<5-$WIT; $i++)
+                                @for($i=0; $i<5-$percepcion; $i++)
                                     <i class="far fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
                             </div>
@@ -131,10 +131,10 @@
                         <li class="vtm-attribute">
                             <span class="vtm-label">Inteligencia</span>
                             <div class="points">
-                                @for($i=0; $i<$INT; $i++)
+                                @for($i=0; $i<$inteligencia; $i++)
                                     <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
-                                @for($i=0; $i<5-$INT; $i++)
+                                @for($i=0; $i<5-$inteligencia; $i++)
                                     <i class="far fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
                             </div>
@@ -142,10 +142,10 @@
                         <li class="vtm-attribute">
                             <span class="vtm-label">Astucia</span>
                             <div class="points">
-                                @for($i=0; $i<$RES; $i++)
+                                @for($i=0; $i<$astucia; $i++)
                                     <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
-                                @for($i=0; $i<5-$RES; $i++)
+                                @for($i=0; $i<5-$astucia; $i++)
                                     <i class="far fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
                             </div>
@@ -161,10 +161,10 @@
                         <li class="vtm-attribute">
                             <span class="vtm-label">Alerta</span>
                             <div class="points">
-                                @for($i=0; $i<$alert; $i++)
+                                @for($i=0; $i<$alerta; $i++)
                                     <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
-                                @for($i=0; $i<5-$alert; $i++)
+                                @for($i=0; $i<5-$alerta; $i++)
                                     <i class="far fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
                             </div>
@@ -172,10 +172,10 @@
                         <li class="vtm-attribute">
                             <span class="vtm-label">Atletismo</span>
                             <div class="points">
-                                @for($i=0; $i<$athletics; $i++)
+                                @for($i=0; $i<$atletismo; $i++)
                                     <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
-                                @for($i=0; $i<5-$athletics; $i++)
+                                @for($i=0; $i<5-$atletismo; $i++)
                                     <i class="far fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
                             </div>
@@ -183,10 +183,10 @@
                         <li class="vtm-attribute">
                             <span class="vtm-label">Callejeo</span>
                             <div class="points">
-                                @for($i=0; $i<$streetwise; $i++)
+                                @for($i=0; $i<$callejeo; $i++)
                                     <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
-                                @for($i=0; $i<5-$streetwise; $i++)
+                                @for($i=0; $i<5-$callejeo; $i++)
                                     <i class="far fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
                             </div>
@@ -194,10 +194,10 @@
                         <li class="vtm-attribute">
                             <span class="vtm-label">Conciencia</span>
                             <div class="points">
-                                @for($i=0; $i<$awareness; $i++)
+                                @for($i=0; $i<$conciencia; $i++)
                                     <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
-                                @for($i=0; $i<5-$awareness; $i++)
+                                @for($i=0; $i<5-$conciencia; $i++)
                                     <i class="far fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
                             </div>
@@ -205,10 +205,10 @@
                         <li class="vtm-attribute">
                             <span class="vtm-label">Empatía</span>
                             <div class="points">
-                                @for($i=0; $i<$empathy; $i++)
+                                @for($i=0; $i<$empatia; $i++)
                                     <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
-                                @for($i=0; $i<5-$empathy; $i++)
+                                @for($i=0; $i<5-$empatia; $i++)
                                     <i class="far fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
                             </div>
@@ -216,10 +216,10 @@
                         <li class="vtm-attribute">
                             <span class="vtm-label">Expresión</span>
                             <div class="points">
-                                @for($i=0; $i<$expression; $i++)
+                                @for($i=0; $i<$expresion; $i++)
                                     <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
-                                @for($i=0; $i<5-$expression; $i++)
+                                @for($i=0; $i<5-$expresion; $i++)
                                     <i class="far fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
                             </div>
@@ -227,10 +227,10 @@
                         <li class="vtm-attribute">
                             <span class="vtm-label">Intimidación</span>
                             <div class="points">
-                                @for($i=0; $i<$intimidation; $i++)
+                                @for($i=0; $i<$intimidacion; $i++)
                                     <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
-                                @for($i=0; $i<5-$intimidation; $i++)
+                                @for($i=0; $i<5-$intimidacion; $i++)
                                     <i class="far fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
                             </div>
@@ -238,10 +238,10 @@
                         <li class="vtm-attribute">
                             <span class="vtm-label">Liderazgo</span>
                             <div class="points">
-                                @for($i=0; $i<$leadership; $i++)
+                                @for($i=0; $i<$liderazgo; $i++)
                                     <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
-                                @for($i=0; $i<5-$leadership; $i++)
+                                @for($i=0; $i<5-$liderazgo; $i++)
                                     <i class="far fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
                             </div>
@@ -249,10 +249,10 @@
                         <li class="vtm-attribute">
                             <span class="vtm-label">Pelea</span>
                             <div class="points">
-                                @for($i=0; $i<$brawl; $i++)
+                                @for($i=0; $i<$pelea; $i++)
                                     <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
-                                @for($i=0; $i<5-$brawl; $i++)
+                                @for($i=0; $i<5-$pelea; $i++)
                                     <i class="far fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
                             </div>
@@ -260,10 +260,10 @@
                         <li class="vtm-attribute">
                             <span class="vtm-label">Subterfugio</span>
                             <div class="points">
-                                @for($i=0; $i<$subterfuge; $i++)
+                                @for($i=0; $i<$subterfugio; $i++)
                                     <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
-                                @for($i=0; $i<5-$subterfuge; $i++)
+                                @for($i=0; $i<5-$subterfugio; $i++)
                                     <i class="far fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
                             </div>
@@ -276,10 +276,10 @@
                         <li class="vtm-attribute">
                             <span class="vtm-label">Armas de Fuego</span>
                             <div class="points">
-                                @for($i=0; $i<$firearms; $i++)
+                                @for($i=0; $i<$armasFuego; $i++)
                                     <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
-                                @for($i=0; $i<5-$firearms; $i++)
+                                @for($i=0; $i<5-$armasFuego; $i++)
                                     <i class="far fa-circle fa-xs" aria-hidden="true"></i>
                                     @endfor
                             </div>
@@ -287,10 +287,10 @@
                         <li class="vtm-attribute">
                             <span class="vtm-label">Artesanía</span>
                             <div class="points">
-                                @for($i=0; $i<$craft; $i++)
+                                @for($i=0; $i<$artesania; $i++)
                                     <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
-                                @for($i=0; $i<5-$craft; $i++)
+                                @for($i=0; $i<5-$artesania; $i++)
                                     <i class="far fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
                             </div>
@@ -298,10 +298,10 @@
                         <li class="vtm-attribute">
                             <span class="vtm-label">Conducir</span>
                             <div class="points">
-                                @for($i=0; $i<$drive; $i++)
+                                @for($i=0; $i<$conducir; $i++)
                                     <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
-                                @for($i=0; $i<5-$drive; $i++)
+                                @for($i=0; $i<5-$conducir; $i++)
                                     <i class="far fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
                             </div>
@@ -309,10 +309,10 @@
                         <li class="vtm-attribute">
                             <span class="vtm-label">Etiqueta</span>
                             <div class="points">
-                                @for($i=0; $i<$etiquette; $i++)
+                                @for($i=0; $i<$etiqueta; $i++)
                                     <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
-                                @for($i=0; $i<5-$etiquette; $i++)
+                                @for($i=0; $i<5-$etiqueta; $i++)
                                     <i class="far fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
                             </div>
@@ -320,10 +320,10 @@
                         <li class="vtm-attribute">
                             <span class="vtm-label">Interpretación</span>
                             <div class="points">
-                                @for($i=0; $i<$performance; $i++)
+                                @for($i=0; $i<$interpretacion; $i++)
                                     <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
-                                @for($i=0; $i<5-$performance; $i++)
+                                @for($i=0; $i<5-$interpretacion; $i++)
                                     <i class="far fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
                             </div>
@@ -331,10 +331,10 @@
                         <li class="vtm-attribute">
                             <span class="vtm-label">Latrocinio</span>
                             <div class="points">
-                                @for($i=0; $i<$larceny; $i++)
+                                @for($i=0; $i<$latrocinio; $i++)
                                     <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
-                                @for($i=0; $i<5-$larceny; $i++)
+                                @for($i=0; $i<5-$latrocinio; $i++)
                                     <i class="far fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
                             </div>
@@ -353,10 +353,10 @@
                         <li class="vtm-attribute">
                             <span class="vtm-label">Sigilo</span>
                             <div class="points">
-                                @for($i=0; $i<$stealth; $i++)
+                                @for($i=0; $i<$sigilo; $i++)
                                     <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
-                                @for($i=0; $i<5-$stealth; $i++)
+                                @for($i=0; $i<5-$sigilo; $i++)
                                     <i class="far fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
                             </div>
@@ -364,10 +364,10 @@
                         <li class="vtm-attribute">
                             <span class="vtm-label">Supervivencia</span>
                             <div class="points">
-                                @for($i=0; $i<$survival; $i++)
+                                @for($i=0; $i<$supervivencia; $i++)
                                     <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
-                                @for($i=0; $i<5-$survival; $i++)
+                                @for($i=0; $i<5-$supervivencia; $i++)
                                     <i class="far fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
                             </div>
@@ -375,10 +375,10 @@
                         <li class="vtm-attribute">
                             <span class="vtm-label">Trato con Animales</span>
                             <div class="points">
-                                @for($i=0; $i<$animalKen; $i++)
+                                @for($i=0; $i<$tratoAnimales; $i++)
                                     <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
-                                @for($i=0; $i<5-$animalKen; $i++)
+                                @for($i=0; $i<5-$tratoAnimales; $i++)
                                     <i class="far fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
                             </div>
@@ -391,10 +391,10 @@
                         <li class="vtm-attribute">
                             <span class="vtm-label">Academicismo</span>
                             <div class="points">
-                                @for($i=0; $i<$academics; $i++)
+                                @for($i=0; $i<$academicismo; $i++)
                                     <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
-                                @for($i=0; $i<5-$academics; $i++)
+                                @for($i=0; $i<5-$academicismo; $i++)
                                     <i class="far fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
                             </div>
@@ -402,10 +402,10 @@
                         <li class="vtm-attribute">
                             <span class="vtm-label">Ciencias</span>
                             <div class="points">
-                                @for($i=0; $i<$science; $i++)
+                                @for($i=0; $i<$ciencia; $i++)
                                     <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
-                                @for($i=0; $i<5-$science; $i++)
+                                @for($i=0; $i<5-$ciencia; $i++)
                                     <i class="far fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
                             </div>
@@ -413,10 +413,10 @@
                         <li class="vtm-attribute">
                             <span class="vtm-label">Finanzas</span>
                             <div class="points">
-                                @for($i=0; $i<$finance; $i++)
+                                @for($i=0; $i<$finanzas; $i++)
                                     <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
-                                @for($i=0; $i<5-$finance; $i++)
+                                @for($i=0; $i<5-$finanzas; $i++)
                                     <i class="far fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
                             </div>
@@ -424,10 +424,10 @@
                         <li class="vtm-attribute">
                             <span class="vtm-label">Informática</span>
                             <div class="points">
-                                @for($i=0; $i<$computer; $i++)
+                                @for($i=0; $i<$informatica; $i++)
                                     <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
-                                @for($i=0; $i<5-$computer; $i++)
+                                @for($i=0; $i<5-$informatica; $i++)
                                     <i class="far fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
                             </div>
@@ -435,10 +435,10 @@
                         <li class="vtm-attribute">
                             <span class="vtm-label">Investigación</span>
                             <div class="points">
-                                @for($i=0; $i<$investigation; $i++)
+                                @for($i=0; $i<$investigacion; $i++)
                                     <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
-                                @for($i=0; $i<5-$investigation; $i++)
+                                @for($i=0; $i<5-$investigacion; $i++)
                                     <i class="far fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
                             </div>
@@ -446,10 +446,10 @@
                         <li class="vtm-attribute">
                             <span class="vtm-label">Leyes</span>
                             <div class="points">
-                                @for($i=0; $i<$law; $i++)
+                                @for($i=0; $i<$leyes; $i++)
                                     <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
-                                @for($i=0; $i<5-$law; $i++)
+                                @for($i=0; $i<5-$leyes; $i++)
                                     <i class="far fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
                             </div>
@@ -457,10 +457,10 @@
                         <li class="vtm-attribute">
                             <span class="vtm-label">Medicina</span>
                             <div class="points">
-                                @for($i=0; $i<$medicine; $i++)
+                                @for($i=0; $i<$medicina; $i++)
                                     <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
-                                @for($i=0; $i<5-$medicine; $i++)
+                                @for($i=0; $i<5-$medicina; $i++)
                                     <i class="far fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
                             </div>
@@ -468,10 +468,10 @@
                         <li class="vtm-attribute">
                             <span class="vtm-label">Ocultismo</span>
                             <div class="points">
-                                @for($i=0; $i<$occult; $i++)
+                                @for($i=0; $i<$ocultismo; $i++)
                                     <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
-                                @for($i=0; $i<5-$occult; $i++)
+                                @for($i=0; $i<5-$ocultismo; $i++)
                                     <i class="far fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
                             </div>
@@ -479,10 +479,10 @@
                         <li class="vtm-attribute">
                             <span class="vtm-label">Política</span>
                             <div class="points">
-                                @for($i=0; $i<$politics; $i++)
+                                @for($i=0; $i<$politica; $i++)
                                     <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
-                                @for($i=0; $i<5-$politics; $i++)
+                                @for($i=0; $i<5-$politica; $i++)
                                     <i class="far fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
                             </div>
@@ -490,10 +490,10 @@
                         <li class="vtm-attribute">
                             <span class="vtm-label">Tecnología</span>
                             <div class="points">
-                                @for($i=0; $i<$technology; $i++)
+                                @for($i=0; $i<$tecnologia; $i++)
                                     <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
-                                @for($i=0; $i<5-$technology; $i++)
+                                @for($i=0; $i<5-$tecnologia; $i++)
                                     <i class="far fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
                             </div>
@@ -507,56 +507,56 @@
                     <h3 class="vtm-h3">Disciplinas</h3>
                     <ul id="disciplines">
                         <li class="benefit">
-                            <span class="vtm-label">{{ $discipline1 }}</span>
+                            <span class="vtm-label">{{ $disciplina1 }}</span>
                             <div class="points">
-                                @for($i=0; $i<$disc1points; $i++)
+                                @for($i=0; $i<$disc1pts; $i++)
                                     <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
-                                @for($i=0; $i<5-$disc1points; $i++)
+                                @for($i=0; $i<5-$disc1pts; $i++)
                                     <i class="far fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
                             </div>
                         </li>
                         <li class="benefit">
-                            <span class="vtm-label">{{ $discipline2 }}</span>
+                            <span class="vtm-label">{{ $disciplina2 }}</span>
                             <div class="points">
-                                @for($i=0; $i<$disc2points; $i++)
+                                @for($i=0; $i<$disc2pts; $i++)
                                     <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
-                                @for($i=0; $i<5-$disc2points; $i++)
+                                @for($i=0; $i<5-$disc2pts; $i++)
                                     <i class="far fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
                             </div>
                         </li>
                         <li class="benefit">
-                            <span class="vtm-label">{{ $discipline3 }}</span>
+                            <span class="vtm-label">{{ $disciplina3 }}</span>
                             <div class="points">
-                                @for($i=0; $i<$disc3points; $i++)
+                                @for($i=0; $i<$disc3pts; $i++)
                                     <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
-                                @for($i=0; $i<5-$disc3points; $i++)
+                                @for($i=0; $i<5-$disc3pts; $i++)
                                     <i class="far fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
                             </div>
                         </li>
                         <li class="benefit">
-                            <span class="vtm-label">{{ $discipline4 }}</span>
+                            <span class="vtm-label">{{ $disciplina4 }}</span>
                             <div class="points">
-                                @for($i=0; $i<$disc4points; $i++)
+                                @for($i=0; $i<$disc4pts; $i++)
                                     <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
-                                @for($i=0; $i<5-$disc4points; $i++)
+                                @for($i=0; $i<5-$disc4pts; $i++)
                                     <i class="far fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
                             </div>
                         </li>
                         <li class="benefit">
-                            <span class="vtm-label">{{ $discipline5 }}</span>
+                            <span class="vtm-label">{{ $disciplina5 }}</span>
                             <div class="points">
-                                @for($i=0; $i<$disc5points; $i++)
+                                @for($i=0; $i<$disc5pts; $i++)
                                     <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
-                                @for($i=0; $i<5-$disc5points; $i++)
+                                @for($i=0; $i<5-$disc5pts; $i++)
                                     <i class="far fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
                             </div>
@@ -567,56 +567,56 @@
                     <h3 class="vtm-h3">Trasfondos</h3>
                     <ul id="backgrounds">
                         <li class="benefit">
-                            <span class="vtm-label">{{ $background1 }}</span>
+                            <span class="vtm-label">{{ $trasfondo1 }}</span>
                             <div class="points">
-                                @for($i=0; $i<$bg1points; $i++)
+                                @for($i=0; $i<$trasf1pts; $i++)
                                     <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
-                                @for($i=0; $i<5-$bg1points; $i++)
+                                @for($i=0; $i<5-$trasf1pts; $i++)
                                     <i class="far fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
                             </div>
                         </li>
                         <li class="benefit">
-                            <span class="vtm-label">{{ $background2 }}</span>
+                            <span class="vtm-label">{{ $trasfondo2 }}</span>
                             <div class="points">
-                                @for($i=0; $i<$bg2points; $i++)
+                                @for($i=0; $i<$trasf2pts; $i++)
                                     <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
-                                @for($i=0; $i<5-$bg2points; $i++)
+                                @for($i=0; $i<5-$trasf2pts; $i++)
                                     <i class="far fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
                             </div>
                         </li>
                         <li class="benefit">
-                            <span class="vtm-label">{{ $background3 }}</span>
+                            <span class="vtm-label">{{ $trasfondo3 }}</span>
                             <div class="points">
-                                @for($i=0; $i<$bg3points; $i++)
+                                @for($i=0; $i<$trasf3pts; $i++)
                                     <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
-                                @for($i=0; $i<5-$bg3points; $i++)
+                                @for($i=0; $i<5-$trasf3pts; $i++)
                                     <i class="far fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
                             </div>
                         </li>
                         <li class="benefit">
-                            <span class="vtm-label">{{ $background4 }}</span>
+                            <span class="vtm-label">{{ $trasfondo4 }}</span>
                             <div class="points">
-                                @for($i=0; $i<$bg4points; $i++)
+                                @for($i=0; $i<$trasf4pts; $i++)
                                     <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
-                                @for($i=0; $i<5-$bg4points; $i++)
+                                @for($i=0; $i<5-$trasf4pts; $i++)
                                     <i class="far fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
                             </div>
                         </li>
                         <li class="benefit">
-                            <span class="vtm-label">{{ $background5 }}</span>
+                            <span class="vtm-label">{{ $trasfondo5 }}</span>
                             <div class="points">
-                                @for($i=0; $i<$bg5points; $i++)
+                                @for($i=0; $i<$trasf5pts; $i++)
                                     <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
-                                @for($i=0; $i<5-$bg5points; $i++)
+                                @for($i=0; $i<5-$trasf5pts; $i++)
                                     <i class="far fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
                             </div>
@@ -629,10 +629,10 @@
                         <li class="benefit">
                             <span class="vtm-label">Conciencia/Convicción</span>
                             <div class="points">
-                                @for($i=0; $i<$conscience; $i++)
+                                @for($i=0; $i<$conciencia; $i++)
                                     <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
-                                @for($i=0; $i<5-$conscience; $i++)
+                                @for($i=0; $i<5-$conciencia; $i++)
                                     <i class="far fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
                             </div>
@@ -640,10 +640,10 @@
                         <li class="benefit">
                             <span class="vtm-label">Autocontrol/Instinto</span>
                             <div class="points">
-                                @for($i=0; $i<$selfControl; $i++)
+                                @for($i=0; $i<$autocontrol; $i++)
                                     <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
-                                @for($i=0; $i<5-$selfControl; $i++)
+                                @for($i=0; $i<5-$autocontrol; $i++)
                                     <i class="far fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
                             </div>
@@ -651,10 +651,10 @@
                         <li class="benefit">
                             <span class="vtm-label">Coraje</span>
                             <div class="points">
-                                @for($i=0; $i<$courage; $i++)
+                                @for($i=0; $i<$coraje; $i++)
                                     <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
-                                @for($i=0; $i<5-$courage; $i++)
+                                @for($i=0; $i<5-$coraje; $i++)
                                     <i class="far fa-circle fa-xs" aria-hidden="true"></i>
                                 @endfor
                             </div>
@@ -670,34 +670,34 @@
                             <th class="mainCol bold">Mérito</th>
                             <th class="costCol bold">Coste</th>
                         </tr>
-                        @if($merit1 != null)
+                        @if($merito1 != null)
                         <tr>
-                            <td><span class="nameCol">{{ $merit1 }}</span></td>
-                            <td class="ptsCol">{{ $merit1pts }}</td>
+                            <td><span class="nameCol">{{ $merito1 }}</span></td>
+                            <td class="ptsCol">{{ $merito1pts }}</td>
                         </tr>
                         @endif
-                        @if($merit2 !=null)
+                        @if($merito2 !=null)
                         <tr>
-                            <td><span class="nameCol">{{ $merit2 }}</span></td>
-                            <td class="ptsCol">{{ $merit2pts }}</td>
+                            <td><span class="nameCol">{{ $merito2 }}</span></td>
+                            <td class="ptsCol">{{ $merito2pts }}</td>
                         </tr>
                         @endif
-                        @if($merit3 != '')
+                        @if($merito3 != null)
                         <tr>
-                            <td><span class="nameCol">{{ $merit3 }}</span></td>
-                            <td class="ptsCol">{{ $merit3pts }}</td>
+                            <td><span class="nameCol">{{ $merito3 }}</span></td>
+                            <td class="ptsCol">{{ $merito3pts }}</td>
                         </tr>
                         @endif
-                        @if($merit4 != null)
+                        @if($merito4 != null)
                         <tr>
-                            <td><span class="nameCol">{{ $merit4 }}</span></td>
-                            <td class="ptsCol">{{ $merit4pts }}</td>
+                            <td><span class="nameCol">{{ $merito4 }}</span></td>
+                            <td class="ptsCol">{{ $merito4pts }}</td>
                         </tr>
                         @endif
-                        @isf($merit5 != null)
+                        @isf($merito5 != null)
                         <tr>
-                            <td><span class="nameCol">{{ $merit5 }}</span></td>
-                            <td class="ptsCol">{{ $merit5pts }}</td>
+                            <td><span class="nameCol">{{ $merito5 }}</span></td>
+                            <td class="ptsCol">{{ $merito5pts }}</td>
                         </tr>
                         @endif
                     </table>
@@ -706,34 +706,34 @@
                             <th class="mainCol bold">Defecto</th>
                             <th class="costCol bold">Coste</th>
                         </tr>
-                        @if($flaw1)
+                        @if($defecto1)
                         <tr>
-                            <td><span class="nameCol">{{ $flaw1 }}</span></td>
-                            <td class="ptsCol">{{ $flaw1pts }}</td>
+                            <td><span class="nameCol">{{ $defecto1 }}</span></td>
+                            <td class="ptsCol">{{ $defecto1pts }}</td>
                         </tr>
                         @endif
-                        @if($flaw2)
+                        @if($defecto2)
                         <tr>
-                            <td><span class="nameCol">{{ $flaw2 }}</span></td>
-                            <td class="ptsCol">{{ $flaw2pts }}</td>
+                            <td><span class="nameCol">{{ $defecto2 }}</span></td>
+                            <td class="ptsCol">{{ $defecto2pts }}</td>
                         </tr>
                         @endif
-                        @if($flaw3)
+                        @if($defecto3)
                         <tr>
-                            <td><span class="nameCol">{{ $flaw3 }}</span></td>
-                            <td class="ptsCol">{{ $flaw3pts }}</td>
+                            <td><span class="nameCol">{{ $defecto3 }}</span></td>
+                            <td class="ptsCol">{{ $defecto3pts }}</td>
                         </tr>
                         @endif
-                        @if($flaw4)
+                        @if($defecto4)
                         <tr>
-                            <td><span class="nameCol">{{ $flaw4 }}</span></td>
-                            <td class="ptsCol">{{ $flaw4pts }}</td>
+                            <td><span class="nameCol">{{ $defecto4 }}</span></td>
+                            <td class="ptsCol">{{ $defecto4pts }}</td>
                         </tr>
                         @endif
-                        @isf($flaw5)
+                        @isf($defecto5)
                         <tr>
-                            <td><span class="nameCol">{{ $flaw5 }}</span></td>
-                            <td class="ptsCol">{{ $flaw5pts }}</td>
+                            <td><span class="nameCol">{{ $defecto5 }}</span></td>
+                            <td class="ptsCol">{{ $defecto5pts }}</td>
                         </tr>
                         @endif
                     </table>
@@ -741,37 +741,37 @@
                 <div id="tracks-2" class="col-3">
                     <div id="path">
                         <h3 class="vtm-h3">Humanidad/Senda</h3>
-                        <p>{{ $path }}</p>
+                        <p>{{ $senda }}</p>
                         <div class="points">
-                            @for($i=0; $i<$pathPts; $i++)
+                            @for($i=0; $i<$sendaPts; $i++)
                                 <i class="fas fa-circle fa-sm" aria-hidden="true"></i>
                             @endfor
-                            @for($i=0; $i<10-$pathPts; $i++)
+                            @for($i=0; $i<10-$sendaPts; $i++)
                                 <i class="far fa-circle fa-sm" aria-hidden="true"></i>
                             @endfor
                         </div>
-                        @if($bearing)
-                        <p>Porte: {{ $bearing }}</p>
+                        @if($porte)
+                        <p>Porte: {{ $porte }}</p>
                         @endif
                     </div>
                     <div id="willpower">
                         <h3 class="vtm-h3">Fuerza de voluntad</h3>
                         <div class="points mb-2">
-                            @for($i=0; $i<$willpower; $i++)
+                            @for($i=0; $i<$fzaVoluntad; $i++)
                                 <i class="fas fa-circle fa-sm" aria-hidden="true"></i>
                             @endfor
-                            @for($i=0; $i<10-$willpower; $i++)
+                            @for($i=0; $i<10-$fzaVoluntad; $i++)
                                 <i class="far fa-circle fa-sm" aria-hidden="true"></i>
                             @endfor
                         </div>
                         <div class="points">
-                            @for($i=0; $i<$willpowerCurrent; $i++)
+                            @for($i=0; $i<$fzaVoluntadActual; $i++)
                                 <i class="far fa-square fa-sm" aria-hidden="true"></i>
                             @endfor
-                            @for($i=0; $i<$willpower-$willpowerCurrent; $i++)
+                            @for($i=0; $i<$fzaVoluntad-$fzaVoluntadActual; $i++)
                                 <i class="far fa-check-square fa-sm" aria-hidden="true"></i>
                             @endfor
-                            @for($i=0; $i< 10 - $willpower; $i++)
+                            @for($i=0; $i< 10 - $fzaVoluntad; $i++)
                                 <i class="fas fa-square fa-sm" aria-hidden="true"></i>
                             @endfor
                         </div>
@@ -779,23 +779,23 @@
                     <div id="blood">
                         <h3 class="vtm-h3">Reserva de sangre</h3>
                         <div id="bloodTrack" class="points mb-2">
-                            @for($i=0; $i<$bloodConsumed; $i++)
+                            @for($i=0; $i<$sangreConsumida; $i++)
                                 <div class="boxWrapper">
                                     <i class="far fa-check-square fa-sm" aria-hidden="true"></i>
                                 </div>
                             @endfor
-                            @for($i=0; $i<$maxBlood - $bloodConsumed; $i++)
+                            @for($i=0; $i<$maxSangre - $sangreConsumida; $i++)
                                 <div class="boxWrapper">
                                     <i class="far fa-square fa-sm" aria-hidden="true"></i>
                                 </div>
                             @endfor
-                            @for($i=0; $i< 20 - $maxBlood; $i++)
+                            @for($i=0; $i< 20 - $maxSangre; $i++)
                                 <div class="boxWrapper">
                                     <i class="fas fa-square fa-sm" aria-hidden="true"></i>
                                 </div>
                             @endfor
                         </div>
-                        <p class="p-center">Sangre por turno: {{ $bloodPerTurn }}</p>
+                        <p class="p-center">Sangre por turno: {{ $sangrePorTurno }}</p>
                     </div>
                 </div>
                 <div id="tracks-3" class="col-3">
@@ -806,7 +806,7 @@
                                 <td class="condition">Magullado</td>
                                 <td class="modifier"></td>
                                 <td class="checkbox">
-                                    @if($bruised == false)
+                                    @if($magullado == false)
                                         <i class="far fa-square fa-sm" aria-hidden="true"></i>
                                     @else
                                         <i class="far fa-check-square fa-sm" aria-hidden="true"></i>
@@ -817,7 +817,7 @@
                                 <td class="condition">Lastimado</td>
                                 <td class="modifier">-1</td>
                                 <td class="checkbox">
-                                    @if($hurt == false)
+                                    @if($lastimado == false)
                                         <i class="far fa-square fa-sm" aria-hidden="true"></i>
                                     @else
                                         <i class="far fa-check-square fa-sm" aria-hidden="true"></i>
@@ -828,7 +828,7 @@
                                 <td class="condition">Lesionado</td>
                                 <td class="modifier">-1</td>
                                 <td class="checkbox">
-                                    @if($injured == false)
+                                    @if($lesionado == false)
                                         <i class="far fa-square fa-sm" aria-hidden="true"></i>
                                     @else
                                         <i class="far fa-check-square fa-sm" aria-hidden="true"></i>
@@ -839,7 +839,7 @@
                                 <td class="condition">Herido</td>
                                 <td class="modifier">-2</td>
                                 <td class="checkbox">
-                                    @if($wounded == false)
+                                    @if($herido == false)
                                         <i class="far fa-square fa-sm" aria-hidden="true"></i>
                                     @else
                                         <i class="far fa-check-square fa-sm" aria-hidden="true"></i>
@@ -850,7 +850,7 @@
                                 <td class="condition">Malherido</td>
                                 <td class="modifier">-2</td>
                                 <td class="checkbox">
-                                    @if($mauled == false)
+                                    @if($malherido == false)
                                         <i class="far fa-square fa-sm" aria-hidden="true"></i>
                                     @else
                                         <i class="far fa-check-square fa-sm" aria-hidden="true"></i>
@@ -861,7 +861,7 @@
                                 <td class="condition">Tullido</td>
                                 <td class="modifier">-5</td>
                                 <td class="checkbox">
-                                    @if($crippled == false)
+                                    @if($tullido == false)
                                         <i class="far fa-square fa-sm" aria-hidden="true"></i>
                                     @else
                                         <i class="far fa-check-square fa-sm" aria-hidden="true"></i>
@@ -872,7 +872,7 @@
                                 <td class="condition">Incapacitado</td>
                                 <td class="modifier"></td>
                                 <td class="checkbox">
-                                    @if($incapacitated == false)
+                                    @if($incapacitado == false)
                                         <i class="far fa-square fa-sm" aria-hidden="true"></i>
                                     @else
                                         <i class="far fa-check-square fa-sm" aria-hidden="true"></i>
@@ -883,7 +883,7 @@
                     </div>
                     <div id="weakness">
                         <h3 class="vtm-h3">Debilidad</h3>
-                        <p class="p-center p-large">{{ $weakness }}</p>
+                        <p class="p-center p-large">{{ $debilidad }}</p>
                     </div>
                     <div id="xp">
                         <h3 class="vtm-h3">Experiencia</h3>
