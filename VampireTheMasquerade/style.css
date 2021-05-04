@@ -67,6 +67,7 @@ main {
 @media only screen and (min-width: 600px) {
   .col-3 {
     width: 300px;
+    max-width: 33%;
   }
 }
 
