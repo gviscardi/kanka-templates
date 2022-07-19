@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@700&family=Cormorant:ital@0;1&family=Cinzel&display=swap');
 
+@font-face {
+  font-family: GarishMonde;
+  src: url('http://www.hard-wire.net/fonts/garish_monde.ttf');
+}
+
 /* Headings */
 h1.vtm-h1 {
+
   text-align: center;
-  font-family: 'Cinzel', Cambria, Times, serif;
+  font-family: 'GarishMonde', 'Cinzel', Cambria, Times, serif;
   margin-top: 0;
 }
 
