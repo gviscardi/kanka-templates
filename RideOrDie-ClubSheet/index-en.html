@@ -36,7 +36,7 @@
                 <li class="vtm-attribute">
                   <span class="vtm-label">Notoriety</span>
                   <div class="points">
-                  @for($i=0; $i<10; $i++)
+                  @for($i=0; $i < 10; $i++)
                     @if($i<$notoriety)
                       <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
                     @else
@@ -48,7 +48,7 @@
                 <li class="vtm-attribute">
                   <span class="vtm-label">Contacts</span>
                   <div class="points">
-                    @for($i=0; $i<$contacts; $i++)
+                    @for($i=0; $i < 10; $i++)
                       @if($i<$contacts)
                         <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
                       @else
@@ -68,7 +68,7 @@
                 <li><span class="bold vtm-label">Vice President:</span> {{ $vpresident }}</li>
                 <li><span class="bold vtm-label">Man at Arms:</span> {{ $manatarms }}</li>
                 <li><span class="bold vtm-label">Treasurer:</span> {{ $treasurer }}</li>
-                @for($i=0; $i<6; $i++)
+                @for($i=5; $i < 11; $i++)
                   <li>
                     <span class="vtm-label">Name:</span> {{ ${"member$i"} }}
                     <div class="points">
@@ -80,7 +80,7 @@
             </div>
             <div id="abilities-2" class="col-2">
               <ul>
-                @for($i=7; $i<17; $i++)
+                @for($i=10; $i < 21; $i++)
                   <li>
                     <span class="vtm-label">Name:</span>
                     @if(${"member$i"} != null)
@@ -101,7 +101,7 @@
               <div id="benefits-1" class="col-2">
                   <h3 class="vtm-h3">Charter Location</h3>
                   <ul id="disciplines">
-                    @for($i=0; $i<10; $i++)
+                    @for($i=0; $i < 10; $i++)
                       <li class="benefit">
                         @if(${"charterloc$i"} != null)
                           <span class="vtm-label">{{ ${"charterloc$i"} }}</span>
@@ -115,7 +115,7 @@
               <div id="benefits-2" class="col-2">
                   <h3 class="vtm-h3">President</h3>
                   <ul id="backgrounds">
-                    @for($i=0; $i<10; $i++)
+                    @for($i=0; $i < 10; $i++)
                       <li class="benefit">
                         @if(${"charterpres$i"} != null)
                           <span class="vtm-label">{{ ${"charterpres$i"} }}</span>
@@ -132,7 +132,7 @@
               <div id="benefits-1" class="col-2">
                   <h3 class="vtm-h3">Business Name</h3>
                   <ul id="disciplines">
-                    @for($i=0; $i<5; $i++)
+                    @for($i=0; $i < 5; $i++)
                       <li class="benefit">
                         @if(${"businessname$i"} != null)
                           <span class="vtm-label">{{ ${"businessname$i"} }}</span>
@@ -146,9 +146,9 @@
               <div id="benefits-2" class="col-2">
                   <h3 class="vtm-h3">Monthly Income</h3>
                   <ul id="backgrounds">
-                    @for($i=0; $i<5; $i++)
+                    @for($i=0; $i < 5; $i++)
                       <li class="benefit">
-                        @if(${"businessinc$i"} != null)
+                        @if(isset(${"businessinc$i"}))
                           <span class="vtm-label">{{ ${"businessinc$i"} }}</span>
                         @else
                           <div class="points"><hr /></div>
