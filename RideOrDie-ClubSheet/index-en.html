@@ -83,11 +83,12 @@
                 @for($i=10; $i < 21; $i++)
                   <li>
                     <span class="vtm-label">Name:</span>
-                    @if(${"member$i"} != null)
-                      {{ ${"member$i"} }}
-                    @else
+                    @empty(${"member$i"})
                       <hr />
-                    @endif
+                    @endempty
+                    @isset(${"member$i"})
+                      {{ ${"member$i"} }}
+                    @endisset
                     <div class="points">
                       <i class="fas fa-circle fa-xs" aria-hidden="false"></i>
                     </div>
@@ -103,11 +104,12 @@
                   <ul id="disciplines">
                     @for($i=0; $i < 10; $i++)
                       <li class="benefit">
-                        @if(${"charterloc$i"} != null)
+                        @isset(${"charterloc$i"})
                           <span class="vtm-label">{{ ${"charterloc$i"} }}</span>
-                        @else
+                        @endisset
+                        @empty(${"charterloc$i"})
                           <div class="points"><hr /></div>
-                        @endif
+                        @endempty
                       </li>
                     @endfor
                   </ul>
@@ -117,11 +119,12 @@
                   <ul id="backgrounds">
                     @for($i=0; $i < 10; $i++)
                       <li class="benefit">
-                        @if(${"charterpres$i"} != null)
+                        @isset(${"charterpres$i"})
                           <span class="vtm-label">{{ ${"charterpres$i"} }}</span>
-                        @else
+                        @endisset
+                        @empty(${"charterpres$i"})
                           <div class="points"><hr /></div>
-                        @endif
+                        @endempty
                       </li>
                     @endfor
                   </ul>
@@ -134,11 +137,12 @@
                   <ul id="disciplines">
                     @for($i=0; $i < 5; $i++)
                       <li class="benefit">
-                        @if(${"businessname$i"} != null)
+                        @isset(${"businessname$i"})
                           <span class="vtm-label">{{ ${"businessname$i"} }}</span>
-                        @else
+                        @endisset
+                        @empty(${"businessname$i"})
                           <div class="points"><hr /></div>
-                        @endif
+                        @endempty
                       </li>
                     @endfor
                   </ul>
@@ -148,11 +152,12 @@
                   <ul id="backgrounds">
                     @for($i=0; $i < 5; $i++)
                       <li class="benefit">
-                        @if(isset(${"businessinc$i"}))
+                        @isset(${"businessinc$i"})
                           <span class="vtm-label">{{ ${"businessinc$i"} }}</span>
-                        @else
+                        @endisset
+                        @empty(${"businessinc$i"})
                           <div class="points"><hr /></div>
-                        @endif
+                        @endempty
                       </li>
                     @endfor
                   </ul>
