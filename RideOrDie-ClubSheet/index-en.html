@@ -70,7 +70,13 @@
                 <li><span class="bold vtm-label">Treasurer:</span> {{ $treasurer }}</li>
                 @for($i=5; $i < 11; $i++)
                   <li>
-                    <span class="vtm-label">Name:</span> {{ ${"member$i"} }}
+                    <span class="vtm-label">Name:</span>
+                    @empty(${"member$i"})
+                      <div style="border: 1px, width: 100%"></div>
+                    @endempty
+                    @isset(${"member$i"})
+                      <div style="border: 1px">{{ ${"member$i"} }}</div>
+                    @endisset
                     <div class="points">
                       <i class="fas fa-circle fa-xs" aria-hidden="false"></i>
                     </div>
@@ -84,10 +90,10 @@
                   <li>
                     <span class="vtm-label">Name:</span>
                     @empty(${"member$i"})
-                      <hr />
+                      <div style="border: 1px; width: 100%"></div>
                     @endempty
                     @isset(${"member$i"})
-                      {{ ${"member$i"} }}
+                      <div style="border: 1px">{{ ${"member$i"} }}</div>
                     @endisset
                     <div class="points">
                       <i class="fas fa-circle fa-xs" aria-hidden="false"></i>
