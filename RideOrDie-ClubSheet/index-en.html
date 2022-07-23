@@ -22,11 +22,11 @@
       </h1>
       <div id="overview" class="row justify-space-between">
         <ul id="overview-1" class="col-2">
-          <li><span class="bold">Name:</span> {{ $clubName }}</li>
+          <li><span class="bold">Name:</span> {!! $clubName !!}</li>
           <li><span class="bold">Patched Members:</span> {{ $members }}</li>
         </ul>
         <ul id="overview-2" class="col-2">
-          <li><span class="bold">Mother Charter:</span> {{ $mother_charter }}</li>
+          <li><span class="bold">Mother Charter:</span> {!! $mother_charter !!}</li>
           <li><span class="bold">Total Charters:</span> {{ $total_charters }}</li>
         </ul>
       </div>
@@ -66,7 +66,7 @@
               <span class="bold rod-label">Business</span>
               <div class="points">
                 @for($i=0; $i < 10; $i++)
-                  @if($i < $businesses)
+                  @if($i < $total_business)
                     <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
                   @else
                     <i class="far fa-circle fa-xs" aria-hidden="true"></i>
@@ -81,18 +81,40 @@
         <div class="section-header">Member List</div>
         <div id="members-left" class="col-2">
           <ul>
-            <li class="member-list"><span class="bold rod-label">President:</span> {{ $president }}</li>
-            <li class="member-list"><span class="bold rod-label">Vice President:</span> {{ $vpresident }}</li>
-            <li class="member-list"><span class="bold rod-label">Man at Arms:</span> {{ $manatarms }}</li>
-            <li class="member-list"><span class="bold rod-label">Treasurer:</span> {{ $treasurer }}</li>
-            @for($i=5; $i < 11; $i++)
+            <li class="member-list">
+              <span class="bold rod-label">President:</span>
+              <div class="points">
+                <i class="fas fa-circle fa-xs" aria-hidden="false"></i>
+              </div>
+              <div>{!! $president !!}</div></li>
+            <li class="member-list">
+              <span class="bold rod-label">Vice President:</span>
+              <div class="points">
+                <i class="fas fa-circle fa-xs" aria-hidden="false"></i>
+              </div>
+              <div>{!! $vpresident !!}</div></li>
+            <li class="member-list">
+              <span class="bold rod-label">Man at Arms:</span>
+              <div class="points">
+                <i class="fas fa-circle fa-xs" aria-hidden="false"></i>
+              </div>
+              <div>{!! $manatarms !!}</div></li>
+            <li class="member-list">
+              <span class="bold rod-label">Treasurer:</span>
+              <div class="points">
+                <i class="fas fa-circle fa-xs" aria-hidden="false"></i>
+              </div>
+              <div>{!! $treasurer !!}</div></li>
+            @for($i=5; $i < 10; $i++)
               <li class="member-list">
                 <span class="bold rod-label">Name:</span>
                 <div class="points">
                   <i class="fas fa-circle fa-xs" aria-hidden="false"></i>
                 </div>
                 @isset(${"member$i"})
-                  <div>{{ ${"member$i"} }}</div>
+                  <div>
+                    {{ ${"member$i"} }}
+                  </div>
                 @endisset
                 @empty(${"member$i"})
                   <div></div>
@@ -155,28 +177,34 @@
         </div>
       </section>
       @endif
-      @if($businesses > 0)
+      @if($total_business > 0)
       <section id="businesses" class="row justify-space-between">
-        <div class="section-header">Business</div>
-        <div id="benefits-1" class="col-2">
-          <div class="subsection">Business Name</div>
-          <ul id="business-name">
-            @for($i=0; $i < 5; $i++)
+        <div class="section-header">Businesses</div>
+        <!--<div id="businesses">//-->
+          <!--<div class="subsection">Business Name</div>//-->
+          <ul id="business-list">
+            @for($i=1; $i <= $total_business; $i++)
               <li class="underline-list">
                 @isset(${"businessname$i"})
-                  <div>{{ ${"businessname$i"} }}</div>
+                  <span>{{ ${"businessname$i"} }}</span>
                 @endisset
                 @empty(${"businessname$i"})
-                  <div></div>
+                  <span></span>
+                @endempty
+                @isset(${"businessinc$i"})
+                  <span>{{ ${"businessinc$i"} }}</span>
+                @endisset
+                @empty(${"businessinc$i"})
+                  <span></span>
                 @endempty
               </li>
             @endfor
           </ul>
-        </div>
-        <div id="benefits-2" class="col-2">
+        <!--</div>//-->
+<!--        <div id="benefits-2" class="col-2">
           <div class="subsection">Monthly Income</div>
           <ul id="monthly-income">
-            @for($i=0; $i < 5; $i++)
+            @for($i=1; $i <= $total_business; $i++)
               <li class="underline-list">
                 @isset(${"businessinc$i"})
                   <div>{{ ${"businessinc$i"} }}</div>
@@ -187,7 +215,7 @@
               </li>
             @endfor
           </ul>
-        </div>
+        </div> //-->
       </section>
       @endif
     </div>
