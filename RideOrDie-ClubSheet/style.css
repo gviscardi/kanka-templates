@@ -5,41 +5,74 @@
   src: url('https://www.hard-wire.net/fonts/garish_monde.ttf');
 }
 
+@font-face {
+  font-family: Halda;
+  src: url('https://www.hard-wire.net/fonts/haldanor.ttf');
+}
+
+@font-face {
+  font-family: Gob;
+  src: url('https://www.hard-wire.net/fonts/gob_____.ttf');
+}
+
 /* Headings */
-h1.vtm-h1 {
+h1.rod-title {
   text-align: center;
-  font-family: 'GarishMonde', 'Cinzel', Cambria, Times, serif;
+  font-family: 'GarishMonde', Times, serif;
   margin-top: 0;
   color: black;
 }
 
-h2.vtm-h2,
 h3.vtm-h3 {
   text-align: center;
-  font-family: 'Bodoni Moda', serif;
+  font-family: 'Halda', serif;
 }
-.subtitle {
+
+div.section-header {
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Halda', serif;
+  font-style: bold;
+}
+
+div.subsection {
+  width: 100%;
+  text-align: center;
+  font-size: 22px;
+  font-family: 'Halda', serif;
+  font-style: bold;
+}
+
+.rod-subtitle {
   font-size: 50%;
 }
 
 /* Typography */
 .bold {
-  font-family: 'Bodoni Moda', serif;
+  font-family: 'Gob', 'Bodoni Moda', serif;
 }
+
+.small {
+  font-size: small;
+}
+
 #overview ul li {
   font-size: larger;
 }
 
 /* Layout */
 main {
-  max-width: 960px;
+  max-width: 1100px;
 }
-.VtM-CharSheet {
+
+.rod-sheet {
   margin: 0 auto;
   padding: 12px;
   font-family: 'Cormorant', Georgia, 'Times New Roman', Times, serif;
   color: black;
   background-color: #f5f5f5;
+  max-width: 1100px;
 }
 
 .row {
@@ -68,7 +101,7 @@ main {
 
 .col-2 {
   width: 100%;
-  padding: 8px 12px;
+  padding: 8px 8px 8px 24px;
   box-sizing: border-box;
 }
 
@@ -83,9 +116,6 @@ main {
     width: 450px;
     max-width: 50%;
   }
-}
-
-@media only screen and (min-width: 600px) {
   .col-3 {
     width: 300px;
     max-width: 33%;
@@ -104,37 +134,55 @@ ul {
 ul li {
   padding: 5px;
 }
-.vtm-attribute,
-.benefit {
+
+.rod-list,
+.member-list {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-between;
+  justify-content: start;
   align-items: baseline;
 }
+
+.member-list {
+  justify-content: start;
+}
+
 .points {
   margin-left: 8px;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: start;
 }
-.vtm-attribute .vtm-label,
-.benefit .vtm-label {
+
+.rod-list .rod-label,
+.member-list .rod-label {
   display: flex;
   align-items: baseline;
-  width: 100%;
+  width: 25%;
   padding: 0;
-  font-size: 100%;
-  font-size: larger;
+  font-size: 120%;
   font-style: normal;
 }
-.vtm-attribute .vtm-label:after,
-.benefit .vtm-label:after {
+
+.member-list .rod-label {
+  font-size: 100%;
+}
+
+.rod-list .rod-label:after,
+.member-list .rod-label:after {
   margin-left: 4px;
-  /*border-bottom: 1px solid black;*/
   content: '';
   flex: 1;
 }
+
+.member-list div:not(div.points),
+.underline-list div:not(div.points) {
+  border-style: none none solid none;
+  border-width: 1px;
+  width: 100%;
+}
+
 #bloodTrack {
   flex-wrap: wrap;
   max-width: 100%;

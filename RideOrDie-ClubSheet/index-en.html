@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="utf-8">
@@ -12,165 +13,185 @@
 </head>
 
 <body>
-    <main>
-        <!-- The code to paste on Kanka starts here -->
-      <div class="VtM-CharSheet">
-          <h1 class="vtm-h1">Ride or Die
-              <br>
-              <span class="subtitle">Club Worksheet</span>
-          </h1>
-          <div id="overview" class="row justify-space-between">
-              <ul id="overview-1" class="col-2">
-                  <li><span class="bold">Name:</span> {{ $clubName }}</li>
-                  <li><span class="bold">Patched Members:</span> {{ $members }}</li>
-              </ul>
-              <ul id="overview-2" class="col-2">
-                  <li><span class="bold">Mother Charter:</span> {{ $mother_charter }}</li>
-                  <li><span class="bold">Total Charters:</span> {{ $total_charters }}</li>
-              </ul>
-          </div>
-          <div id="attributes" class="row justify-space-between">
-            <h2 class="vtm-h2">Attributes</h2>
-            <div id="attributes-2" class="col-3">
-              <ul>
-                <li class="vtm-attribute">
-                  <span class="vtm-label">Notoriety</span>
-                  <div class="points">
-                  @for($i=0; $i < 10; $i++)
-                    @if($i < $notoriety)
-                      <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
-                    @else
-                      <i class="far fa-circle fa-xs" aria-hidden="true"></i>
-                    @endif
-                  @endfor
-                  </div>
-                </li>
-                <li class="vtm-attribute">
-                  <span class="vtm-label">Contacts</span>
-                  <div class="points">
-                    @for($i=0; $i < 10; $i++)
-                      @if($i < $contacts)
-                        <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
-                      @else
-                        <i class="far fa-circle fa-xs" aria-hidden="true"></i>
-                      @endif
-                    @endfor
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div id="abilities" class="row justify-space-between">
-            <h2 class="vtm-h2">Member List</h2>
-            <div id="abilities-1" class="col-2">
-              <ul>
-                <li><span class="bold vtm-label">President:</span> {{ $president }}</li>
-                <li><span class="bold vtm-label">Vice President:</span> {{ $vpresident }}</li>
-                <li><span class="bold vtm-label">Man at Arms:</span> {{ $manatarms }}</li>
-                <li><span class="bold vtm-label">Treasurer:</span> {{ $treasurer }}</li>
-                @for($i=5; $i < 11; $i++)
-                  <li>
-                    <span class="vtm-label">Name:</span>
-                    @empty(${"member$i"})
-                      <div style="border: 1px, width: 100%"></div>
-                    @endempty
-                    @isset(${"member$i"})
-                      <div style="border: 1px">{{ ${"member$i"} }}</div>
-                    @endisset
-                    <div class="points">
-                      <i class="fas fa-circle fa-xs" aria-hidden="false"></i>
-                    </div>
-                  </li>
-                @endfor
-              </ul>
-            </div>
-            <div id="abilities-2" class="col-2">
-              <ul>
-                @for($i=10; $i < 21; $i++)
-                  <li>
-                    <span class="vtm-label">Name:</span>
-                    @empty(${"member$i"})
-                      <div style="border: 1px; width: 100%"></div>
-                    @endempty
-                    @isset(${"member$i"})
-                      <div style="border: 1px">{{ ${"member$i"} }}</div>
-                    @endisset
-                    <div class="points">
-                      <i class="fas fa-circle fa-xs" aria-hidden="false"></i>
-                    </div>
-                  </li>
-                @endfor
-              </ul>
-            </div>
-          </div>
-          <div id="benefits" class="row justify-space-between">
-              <h2 class="vtm-h2">Charters</h2>
-              <div id="benefits-1" class="col-2">
-                  <h3 class="vtm-h3">Charter Location</h3>
-                  <ul id="disciplines">
-                    @for($i=0; $i < 10; $i++)
-                      <li class="benefit">
-                        @isset(${"charterloc$i"})
-                          <span class="vtm-label">{{ ${"charterloc$i"} }}</span>
-                        @endisset
-                        @empty(${"charterloc$i"})
-                          <div class="points"><hr /></div>
-                        @endempty
-                      </li>
-                    @endfor
-                  </ul>
-              </div>
-              <div id="benefits-2" class="col-2">
-                  <h3 class="vtm-h3">President</h3>
-                  <ul id="backgrounds">
-                    @for($i=0; $i < 10; $i++)
-                      <li class="benefit">
-                        @isset(${"charterpres$i"})
-                          <span class="vtm-label">{{ ${"charterpres$i"} }}</span>
-                        @endisset
-                        @empty(${"charterpres$i"})
-                          <div class="points"><hr /></div>
-                        @endempty
-                      </li>
-                    @endfor
-                  </ul>
-              </div>
-          </div>
-          <div id="benefits" class="row justify-space-between">
-              <h2 class="vtm-h2">Business</h2>
-              <div id="benefits-1" class="col-2">
-                  <h3 class="vtm-h3">Business Name</h3>
-                  <ul id="disciplines">
-                    @for($i=0; $i < 5; $i++)
-                      <li class="benefit">
-                        @isset(${"businessname$i"})
-                          <span class="vtm-label">{{ ${"businessname$i"} }}</span>
-                        @endisset
-                        @empty(${"businessname$i"})
-                          <div class="points"><hr /></div>
-                        @endempty
-                      </li>
-                    @endfor
-                  </ul>
-              </div>
-              <div id="benefits-2" class="col-2">
-                  <h3 class="vtm-h3">Monthly Income</h3>
-                  <ul id="backgrounds">
-                    @for($i=0; $i < 5; $i++)
-                      <li class="benefit">
-                        @isset(${"businessinc$i"})
-                          <span class="vtm-label">{{ ${"businessinc$i"} }}</span>
-                        @endisset
-                        @empty(${"businessinc$i"})
-                          <div class="points"><hr /></div>
-                        @endempty
-                      </li>
-                    @endfor
-                  </ul>
-              </div>
-          </div>
+  <main>
+  <!-- The code to paste on Kanka starts here -->
+    <div class="rod-sheet">
+      <h1 class="rod-title">Ride or Die
+        <br>
+        <span class="rod-subtitle">Club Worksheet</span>
+      </h1>
+      <div id="overview" class="row justify-space-between">
+        <ul id="overview-1" class="col-2">
+          <li><span class="bold">Name:</span> {{ $clubName }}</li>
+          <li><span class="bold">Patched Members:</span> {{ $members }}</li>
+        </ul>
+        <ul id="overview-2" class="col-2">
+          <li><span class="bold">Mother Charter:</span> {{ $mother_charter }}</li>
+          <li><span class="bold">Total Charters:</span> {{ $total_charters }}</li>
+        </ul>
       </div>
+      <section id="attributes" class="row justify-space-between">
+        <div class="section-header">Attributes</div>
+        <div id="attributes-left" class="col-2">
+          <ul>
+            <li class="rod-list">
+              <span class="bold rod-label">Notoriety</span>
+              <div class="points">
+                @for($i=0; $i < 10; $i++)
+                  @if($i < $notoriety)
+                    <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
+                  @else
+                    <i class="far fa-circle fa-xs" aria-hidden="true"></i>
+                  @endif
+                @endfor
+              </div>
+            </li>
+            <li class="rod-list">
+              <span class="bold rod-label">Connections</span>
+              <div class="points">
+                @for($i=0; $i < 10; $i++)
+                  @if($i < $connections)
+                    <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
+                  @else
+                    <i class="far fa-circle fa-xs" aria-hidden="true"></i>
+                  @endif
+                @endfor
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div id="attributes-right" class="col-2">
+          <ul>
+            <li class="rod-list">
+              <span class="bold rod-label">Business</span>
+              <div class="points">
+                @for($i=0; $i < 10; $i++)
+                  @if($i < $businesses)
+                    <i class="fas fa-circle fa-xs" aria-hidden="true"></i>
+                  @else
+                    <i class="far fa-circle fa-xs" aria-hidden="true"></i>
+                  @endif
+                @endfor
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="members" class="row justify-space-between">
+        <div class="section-header">Member List</div>
+        <div id="members-left" class="col-2">
+          <ul>
+            <li class="member-list"><span class="bold rod-label">President:</span> {{ $president }}</li>
+            <li class="member-list"><span class="bold rod-label">Vice President:</span> {{ $vpresident }}</li>
+            <li class="member-list"><span class="bold rod-label">Man at Arms:</span> {{ $manatarms }}</li>
+            <li class="member-list"><span class="bold rod-label">Treasurer:</span> {{ $treasurer }}</li>
+            @for($i=5; $i < 11; $i++)
+              <li class="member-list">
+                <span class="bold rod-label">Name:</span>
+                <div class="points">
+                  <i class="fas fa-circle fa-xs" aria-hidden="false"></i>
+                </div>
+                @isset(${"member$i"})
+                  <div>{{ ${"member$i"} }}</div>
+                @endisset
+                @empty(${"member$i"})
+                  <div></div>
+                @endempty
+              </li>
+            @endfor
+          </ul>
+        </div>
+        <div id="members-right" class="col-2">
+          <ul>
+            @for($i=10; $i < 20; $i++)
+              <li class="member-list">
+                <span class="bold rod-label">Name:</span>
+                <div class="points">
+                  <i class="fas fa-circle fa-xs" aria-hidden="false"></i>
+                </div>
+                @isset(${"member$i"})
+                  <div>{{ ${"member$i"} }}</div>
+                @endisset
+                @empty(${"member$i"})
+                  <div></div>
+                @endempty
+              </li>
+            @endfor
+          </ul>
+        </div>
+      </section>
+      @if($total_charters > 1)
+      <section id="charters" class="row justify-space-between">
+        <div class="section-header">Charters</div>
+        <div id="charter-locations" class="col-2">
+          <div class="subsection">Charter Location</div>
+          <ul id="locations">
+            @for($i=0; $i < 10; $i++)
+              <li class="underline-list">
+                @isset(${"charterloc$i"})
+                  <div>{{ ${"charterloc$i"} }}</div>
+                @endisset
+                @empty(${"charterloc$i"})
+                  <div></div>
+                @endempty
+              </li>
+            @endfor
+          </ul>
+        </div>
+        <div id="charter-presidents" class="col-2">
+          <div class="subsection">Charter President</div>
+          <ul id="presidents">
+            @for($i=0; $i < 10; $i++)
+              <li class="underline-list">
+                @isset(${"charterpres$i"})
+                  <div>{{ ${"charterpres$i"} }}</div>
+                @endisset
+                @empty(${"charterpres$i"})
+                  <div></div>
+                @endempty
+              </li>
+            @endfor
+          </ul>
+        </div>
+      </section>
+      @endif
+      @if($businesses > 0)
+      <section id="businesses" class="row justify-space-between">
+        <div class="section-header">Business</div>
+        <div id="benefits-1" class="col-2">
+          <div class="subsection">Business Name</div>
+          <ul id="business-name">
+            @for($i=0; $i < 5; $i++)
+              <li class="underline-list">
+                @isset(${"businessname$i"})
+                  <div>{{ ${"businessname$i"} }}</div>
+                @endisset
+                @empty(${"businessname$i"})
+                  <div></div>
+                @endempty
+              </li>
+            @endfor
+          </ul>
+        </div>
+        <div id="benefits-2" class="col-2">
+          <div class="subsection">Monthly Income</div>
+          <ul id="monthly-income">
+            @for($i=0; $i < 5; $i++)
+              <li class="underline-list">
+                @isset(${"businessinc$i"})
+                  <div>{{ ${"businessinc$i"} }}</div>
+                @endisset
+                @empty(${"businessinc$i"})
+                  <div></div>
+                @endempty
+              </li>
+            @endfor
+          </ul>
+        </div>
+      </section>
+      @endif
+    </div>
       <!-- The code to paste on Kanka ends here -->
     </main>
-</body>
+  </body>
 </html>
